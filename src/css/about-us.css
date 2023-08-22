@@ -1,0 +1,19 @@
+.about-us {
+  background: var(--light-blue, #f7faff);
+}
+.title-section {
+  color: var(--blue-font, #0a224a);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.section-text {
+  color: var(--blue-font, #0a224a);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
