@@ -14,7 +14,7 @@
 @import url('./clients-reviews.css');
 @import url('./subscription.css');
 @import url('./footer.css');
-/* @import url('./thanks-msg.css'); */
+@import url('./thanks-msg.css');
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
