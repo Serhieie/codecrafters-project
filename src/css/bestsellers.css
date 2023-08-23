@@ -32,6 +32,9 @@
 }
 .bestsellers-right-item {
 }
+.bestsellers-first-img {
+  margin-bottom: 15px;
+}
 .bestsellers-img {
   margin-bottom: 15px;
 }
@@ -87,7 +90,6 @@
   }
   .bestsellers-first-img {
     max-width: 536px;
-    margin-bottom: 15px;
   }
   .bestsellers-img {
     width: 256px;
