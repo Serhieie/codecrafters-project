@@ -1,8 +1,8 @@
-.bestsselers {
+.bestsellers {
 }
-.bestsselers-container {
+.bestsellers-container {
 }
-.bestsselers-title {
+.bestsellers-title {
   font-family: Roboto;
   font-size: 28px;
   font-weight: 400;
@@ -10,64 +10,64 @@
   text-align: center;
   margin-bottom: 21px;
 }
-.bestsselers-list {
+.bestsellers-list {
 }
-.bestsselers-item {
+.bestsellers-item {
 }
-.bestsselers-left-side {
+.bestsellers-left-side {
   margin-bottom: 30px;
 }
-.bestsselers-right-side {
+.bestsellers-right-side {
 }
-.bestsselers-right-list {
+.bestsellers-right-list {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 @media (max-width: 768px) {
-  .bestsselers-right-list li:nth-child(3),
-  .bestsselers-right-list li:nth-child(4) {
+  .bestsellers-right-list li:nth-child(3),
+  .bestsellers-right-list li:nth-child(4) {
     display: none;
   }
 }
-.bestsselers-right-item {
+.bestsellers-right-item {
 }
-.bestsselers-img {
+.bestsellers-img {
   margin-bottom: 15px;
 }
-.bestsselers-item-title {
+.bestsellers-item-title {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 10px;
 }
-.bestsselers-item-text {
+.bestsellers-item-text {
   font-weight: 700;
 }
 
 /* Tablet------------------------------------------------------------------------------- */
 
 @media screen and (min-width: 768px) {
-  .bestsselers-container {
+  .bestsellers-container {
     display: flex;
     flex-direction: column;
   }
-  .bestsselers-title {
+  .bestsellers-title {
     font-size: 32px;
     line-height: 1.4;
     margin-bottom: 30px;
   }
-  .bestsselers-left-side {
+  .bestsellers-left-side {
     margin-bottom: 32px;
   }
-  .bestsselers-right-list {
+  .bestsellers-right-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px;
   }
-  .bestsselers-right-item {
+  .bestsellers-right-item {
     width: calc((100% - 32px) / 2);
   }
-  .bestsselers-item-title {
+  .bestsellers-item-title {
     font-size: 18px;
   }
 }
@@ -75,21 +75,21 @@
 /* Desctop------------------------------------------------------------------------------ */
 
 @media screen and (min-width: 1440px) {
-  .bestsselers-list {
+  .bestsellers-list {
     display: flex;
     gap: 24px;
   }
-  .bestsselers-right-list {
+  .bestsellers-right-list {
     gap: 30px 20px;
   }
-  .bestsselers-right-item {
+  .bestsellers-right-item {
     max-width: 256px;
   }
-  .bestsselers-first-img {
+  .bestsellers-first-img {
     max-width: 536px;
     margin-bottom: 15px;
   }
-  .bestsselers-img {
+  .bestsellers-img {
     width: 256px;
   }
 }
