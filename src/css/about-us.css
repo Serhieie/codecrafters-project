@@ -1,0 +1,78 @@
+.abs-title{
+    color: var(--blue-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-left: 50px;
+}
+
+/* .abs-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: var(--hover-color, #061835);
+  } */
+
+.abs-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    width: 30px;
+    height: 1px;
+    background-color:var(--blue-font);
+  }
+
+.abs-subtitle{
+    margin: 30px 0;
+    color: var(--blue-font);
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.abs-description{
+    margin-top: 30px;
+    color: var(--blue-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.abs-advantages{
+    width: 170px;
+    margin: auto;
+}
+
+.abs-advantages-list{
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.abs-subtitle-advantages{
+    color: var(--blue-font);
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.abs-description-advantages{
+    margin-top: 16px;
+    color: var(--blue-font);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.abs-img{
+    margin-top: 64px;
+}
