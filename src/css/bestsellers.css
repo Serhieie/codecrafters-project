@@ -66,15 +66,22 @@
 /* Desctop------------------------------------------------------------------------------ */
 
 @media screen and (min-width: 1440px) {
-  .bestsellers-list {
-    display: flex;
+  .bestsellers-container {
+    flex-direction: row;
     gap: 24px;
+    padding-right: 112px;
+    padding-left: 112px;
   }
+  .bestsellers-left-side {
+    margin-bottom: 0;
+  }
+
   .bestsellers-right-list {
     gap: 30px 20px;
   }
   .bestsellers-right-item {
     max-width: 256px;
+    width: calc((100% - 20px) / 2);
   }
   .bestsellers-first-img {
     max-width: 536px;
