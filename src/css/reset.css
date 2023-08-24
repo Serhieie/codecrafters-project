@@ -30,7 +30,6 @@ img {
   height: auto;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -53,14 +52,14 @@ h1 {
   font-family: 'Playfair Display', serif;
 }
 
-h2,h3 {
-font-size: 28px;
+h2,
+h3 {
+  font-size: 28px;
 }
 
-section { 
+section {
   padding: 64px 0;
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -96,7 +95,7 @@ body.no-scroll {
     max-width: 704px;
 
   }
-  section { 
+  section {
     padding: 100px 0;
   }
 }
