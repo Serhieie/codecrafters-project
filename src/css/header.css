@@ -75,6 +75,7 @@
 .header-menu-btn::before,
 .header-menu-btn::after {
   position: absolute;
+  left: 9px;
   content: "";
   width: 26px;
   height: 2.5px;
@@ -86,12 +87,10 @@
 
 .header-menu-btn::before{
   top: 8px;
-  left: 9px;
 }
 
 .header-menu-btn::after {
-  left: 9px;
-  bottom: 7.5px;
+  bottom: 8px;
 }
 
 .header-menu-btn.is-open::before {
