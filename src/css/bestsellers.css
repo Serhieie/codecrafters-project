@@ -1,7 +1,3 @@
-.bestsellers {
-}
-.bestsellers-container {
-}
 .bestsellers-title {
   font-family: Roboto;
   font-size: 28px;
@@ -10,14 +6,8 @@
   text-align: center;
   margin-bottom: 21px;
 }
-.bestsellers-list {
-}
-.bestsellers-item {
-}
 .bestsellers-left-side {
   margin-bottom: 30px;
-}
-.bestsellers-right-side {
 }
 .bestsellers-right-list {
   display: flex;
@@ -29,8 +19,6 @@
   .bestsellers-right-list li:nth-child(4) {
     display: none;
   }
-}
-.bestsellers-right-item {
 }
 .bestsellers-first-img {
   margin-bottom: 15px;
