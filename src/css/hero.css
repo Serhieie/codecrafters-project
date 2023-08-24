@@ -20,7 +20,7 @@
       background-size: cover;
     }
   }
-  .hero-container {
+  div.container.hero-container {
     padding-top: 140px;
     padding-bottom: 313px;
     max-width: 375px;
@@ -31,22 +31,11 @@
 }
 
 .hero-title {
-  color: var(--blue-font);
-  font-family: Playfair Display;
   font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
   text-transform: uppercase;
 }
 
 .hero-text {
-  color: var(--blue-font);
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
   margin-bottom: 28px;
 }
 
@@ -71,7 +60,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .hero-container {
+  div.container.hero-container {
     padding: 64px 32px 100px;
     margin-left: auto;
     margin-right: auto;
@@ -112,7 +101,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .hero-container {
+  div.container.hero-container {
     display: flex;
     justify-content: space-between;
     padding-left: 57px;
