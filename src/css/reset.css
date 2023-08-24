@@ -53,12 +53,22 @@ h1 {
   font-family: 'Playfair Display', serif;
 }
 
-h2,h3 {
-font-size: 28px;
+h2,
+h3 {
+  font-size: 28px;
 }
 
-section { 
+section {
   padding: 64px 0;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style-type: none;
 }
 
 
@@ -97,7 +107,8 @@ body.no-scroll {
     max-width: 704px;
     padding: 0 32px;
   }
-  section { 
+
+  section {
     padding: 100px 0;
   }
 }

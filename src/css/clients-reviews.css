@@ -1,0 +1,98 @@
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 60px;
+    margin: 0 auto;
+}
+
+/* =============================== */
+
+.client-container {
+    width: 100%;
+    background-color: #F7FAFF;
+}
+
+.client-title {
+    display: flex;
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 42px;
+    /* 150% */
+    color: #0A224A;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 36px;
+}
+
+.client-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.client-item {
+    background-color: #FFFFFF;
+    padding: 24px;
+    width: 343px;
+    height: 230px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--white, #FFF);
+}
+
+.client-item:not(:first-child) {
+    display: none;
+}
+
+/* ==============Контейнер з даними клієнта================ */
+
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.client-img {
+    margin-right: 14px;
+    width: 48px;
+    height: 48px;
+}
+
+/* ==============Ім'я та дата================ */
+
+.client-name {
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    color: #0A224A;
+}
+
+.client-date {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #0A224A;
+    opacity: 0.8;
+}
+
+/* /* ==============Комент клієнта=============== */
+
+.client-text {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #0A224A;
+}
+
+/* =============================== */
