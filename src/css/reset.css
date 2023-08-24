@@ -94,7 +94,7 @@ body.no-scroll {
 
   .container {
     max-width: 704px;
-    padding: 0 32px;
+
   }
   section { 
     padding: 100px 0;
@@ -104,6 +104,5 @@ body.no-scroll {
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1320px;
-    padding: 0 60px;
   }
 }
