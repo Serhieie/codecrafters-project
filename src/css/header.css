@@ -39,7 +39,7 @@
 }
 
 .logo:hover .logo-svg {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 .header-menu-btn {
   position: relative;
