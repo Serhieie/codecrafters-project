@@ -27,7 +27,6 @@
     align-items: center;
 }
 
-
 .price-item-text:hover::before,
 .price-item-text:focus::before {
     content: "";
@@ -70,10 +69,12 @@
       transform: scaleX(0);
       transform-origin: 0% 0%;
       opacity: 1;
+      width: 0px;
     }
     100% {
       transform: scaleX(1);
       transform-origin: 0% 0%;
       opacity: 1;
+      width: 40px;
     }
-  }
+}
