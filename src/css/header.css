@@ -33,7 +33,6 @@
   transform: scale(1);
   transition: transform 300ms ease-in-out;
   fill: var(--blue-font);
-  stroke: var(--blue-font);
   width:100px;
   height:16px;
 }
