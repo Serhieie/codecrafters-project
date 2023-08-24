@@ -1,3 +1,6 @@
+.bestsellers .container {
+  padding: 0 16px;
+}
 .bestsellers-title {
   font-family: Roboto;
   font-size: 28px;
@@ -38,6 +41,9 @@
 /* Tablet------------------------------------------------------------------------------ */
 
 @media screen and (min-width: 768px) {
+  .bestsellers .container {
+    padding: 0 32px;
+  }
   .bestsellers-container {
     display: flex;
     flex-direction: column;
@@ -67,7 +73,8 @@
 
 @media screen and (min-width: 1440px) {
   .bestsellers .container {
-    max-width: 1216px;
+    max-width: 1096px;
+    padding: 0;
   }
   .bestsellers-container {
     flex-direction: row;

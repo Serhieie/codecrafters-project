@@ -30,7 +30,6 @@ img {
   height: auto;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -53,14 +52,14 @@ h1 {
   font-family: 'Playfair Display', serif;
 }
 
-h2,h3 {
-font-size: 28px;
+h2,
+h3 {
+  font-size: 28px;
 }
 
-section { 
+section {
   padding: 64px 0;
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -83,7 +82,6 @@ body.no-scroll {
 
 .container {
   max-width: 343px;
-  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -95,9 +93,8 @@ body.no-scroll {
 
   .container {
     max-width: 704px;
-    padding: 0 32px;
   }
-  section { 
+  section {
     padding: 100px 0;
   }
 }
@@ -105,6 +102,5 @@ body.no-scroll {
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1320px;
-    padding: 0 60px;
   }
 }
