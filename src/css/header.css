@@ -51,6 +51,8 @@
   opacity: 1;
   transition: opacity 300ms ease-in-out;
   width: 32px 32px;
+  padding-right: 0;
+
 }
 
 .header-menu-btn.is-open .header-icon-mobile {
@@ -116,7 +118,7 @@
   position: absolute;
   display: block;
   left: 0;
-  top: 102px;
+  top: 88px;
   width: 100vw;
   height: 100vh;
   justify-content: center;
@@ -239,7 +241,7 @@
   }
 
   .header-menu-container.is-open {
-    top: 105px;
+    top: 98px;
     padding-top: 150px;   
     }
 }
