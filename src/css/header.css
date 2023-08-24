@@ -1,7 +1,18 @@
+@keyframes slideAnim {
+  from {transform: translateX(-100%)}
+  to {transform: translateX(0)}
+}
+
+@keyframes slideDisap {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+
 .header {
-  padding: 28px 0;
+  z-index: 99;
+  padding: 21px 0;
   background-color: var(--light-blue,#F7FAFF);
-  z-index: 1;
 }
 
 .header-container {
@@ -11,8 +22,6 @@
 }
 
 .logo {
-  width: 100px;
-  height: 16px;
   display: flex;
   align-items: center;
   z-index: 2;
@@ -25,7 +34,10 @@
   transition: transform 300ms ease-in-out;
   fill: var(--blue-font);
   stroke: var(--blue-font);
+  width:100px;
+  height:16px;
 }
+
 .logo:hover .logo-svg {
   transform: scale(1.1);
 }
@@ -38,7 +50,7 @@
   z-index: 2;
   opacity: 1;
   transition: opacity 300ms ease-in-out;
-  padding-right: 0;
+  width: 32px 32px;
 }
 
 .header-menu-btn.is-open .header-icon-mobile {
@@ -62,8 +74,8 @@
 .header-menu-btn::after {
   position: absolute;
   content: "";
-  width: 17px;
-  height: 1.5px;
+  width: 26px;
+  height: 2.5px;
   border-radius: 4px;
   background-color: var(--blue-font);
   z-index: 10;
@@ -71,23 +83,29 @@
 }
 
 .header-menu-btn::before{
-  top: 5.5px;
-  left: 7.5px;
+  top: 8px;
+  left: 9px;
 }
 
 .header-menu-btn::after {
-  left: 7.5px;
-  bottom: 5.5px;
+  left: 9px;
+  bottom: 7.5px;
 }
 
 .header-menu-btn.is-open::before {
-  top: 60%;
+  top: 50%;
+  width: 22px;
+  height: 2px;
+  left: 27%;
   transform: rotate(-45deg) translate(0, -50%);
 
 }
 
 .header-menu-btn.is-open::after {
-  top: 55%;
+  width: 22px;
+  height: 2px;
+  left: 27%;
+  top: 46%;
   transform: rotate(45deg) translate(0, 50%);
 }
 
@@ -95,36 +113,21 @@
 
 
 .header-menu-container.is-open {
-  opacity: 1;
   position: absolute;
-  display: inline-block;
+  display: block;
   left: 0;
-  top: 86px;
-  width: 100%;
-  height: 100%;
+  top: 102px;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
   background-color: var(--white, #FFF);
   transform: translateX(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-top: 114px;
   animation: slideAnim 600ms;
+  }
+
   
-  }
-
-  .header-navigation {
-    
-    animation: slideDisap 600ms;
-  }
-  @keyframes slideAnim {
-    from {transform: translateX(-100%)}
-    to {transform: translateX(0)}
-  }
-
-  @keyframes slideDisap {
-    from {opacity: 0}
-    to {opacity: 1}
-  }
-
 .header-nav-list {
   display: none;
   flex-direction: column;
@@ -148,7 +151,7 @@
 
 .header-nav-link:hover,
 .header-nav-link:focus {
-  color:var(--blue-font,#0A224A);
+  color:var(--hover-color,#061835);
 }
 
 .header-nav-link::after {
@@ -168,12 +171,28 @@
   transform: scaleX(1); 
 }
 
+
 .body.thx-no-scroll .header-menu-btn {
   pointer-events: none;
 }
 
+
+.header-icon-burger {
+  width: 32px;
+  height: 32px;
+}
+
+
+
 @media screen and (min-width: 768px) {
-  .logo {
+  .header {
+    padding: 25px 0;
+  }
+  .logo-svg {
+    width: 127px;
+    height: 16px;
+  }
+  .logo-svg use{
     width: 127px;
     height: 16px;
   }
@@ -181,13 +200,51 @@
   .header-nav-list {
     gap: 30px;
   }
+
+  
+  .header-icon-burger {
+    width: 40px;
+    height: 40px;
+  }
+
+
+
+  .header-menu-btn::before,
+.header-menu-btn::after {
+  width: 33px;
+  height: 3px;
+  left: 9.5px;
+  bottom: 9.5px;
+}
+
+  .header-menu-btn::before{
+    top: 9.5px;
+  }
+
+  .header-menu-btn.is-open::before {
+    top: 58%;
+  }
+
+  .header-menu-btn.is-open::before {
+    left: 30%;
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  
+  }
+  
+  .header-menu-btn.is-open::after {
+    left: 30%;
+    top: 46%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+
+  .header-menu-container.is-open {
+    top: 105px;
+    padding-top: 150px;   
+    }
 }
 
 @media screen and (min-width: 1440px) {
-  .header-nav-list {
-    flex-direction: row;
-    display: flex;
-  }
 
   .header-menu-btn {
     display: none;
@@ -197,10 +254,9 @@
     align-items: center;
     justify-content: space-between;
   }
-
-
-  .header-menu-container {
-    transform: translateX(0%);
+  .header-nav-list {
+    flex-direction: row;
+    display: flex;
   }
 }
 
