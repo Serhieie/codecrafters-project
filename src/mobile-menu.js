@@ -9,6 +9,7 @@
       mobileMenu.classList.toggle("is-open");
       openMenuBtn.classList.toggle("is-open");
       body.classList.toggle("no-scroll");
+      body.classList.toggle("slide");
   
       const scrollLockMethod = !isMenuOpen ? "disableBodyScroll" : "enableBodyScroll";
     };
