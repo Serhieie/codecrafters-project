@@ -66,11 +66,12 @@
 /* Desctop------------------------------------------------------------------------------ */
 
 @media screen and (min-width: 1440px) {
+  .bestsellers .container {
+    max-width: 1216px;
+  }
   .bestsellers-container {
     flex-direction: row;
     gap: 24px;
-    padding-right: 112px;
-    padding-left: 112px;
   }
   .bestsellers-left-side {
     margin-bottom: 0;
