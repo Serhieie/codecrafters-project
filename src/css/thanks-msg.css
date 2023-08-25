@@ -73,6 +73,7 @@
 
   .body.thx-no-scroll .logo {
     display: none;
+    transition: transform 400ms ease-in-out;
    }
    .body.thx-no-scroll .header-menu-btn {
     display: none;
@@ -115,7 +116,7 @@
     
  
       .backdrop {
-        background-color: rgba(154, 153, 158, 0.75);
+        background-color: rgba(154, 153, 158, 0.55);
       }
       .thanks-container {
         padding: 15px;
@@ -134,14 +135,17 @@
       .body.thx-no-scroll .logo {
         display: block;
         height: 40px;
-        margin-left: 100px;
-        transform: scale(2);
+        margin-left: 50px;
+        transform: scale(1.6);
+        transition: transform 400ms ease-in-out;
        }
 
        .body.thx-no-scroll .logo-svg {
         transform: scale(1.2);
         fill: var(--white);
         stroke: var(--white);
+        transition: transform 400ms ease-in-out;
+        
        }
       
   }
