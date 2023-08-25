@@ -43,9 +43,9 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--blue-font);
-
   font-size: 16px;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 h1 {
@@ -88,7 +88,6 @@ body.no-scroll {
 @media screen and (min-width: 768px) {
   body {
     font-size: 18px;
-    line-height: 1.5;
   }
 
   .container {
