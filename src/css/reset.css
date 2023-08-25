@@ -58,7 +58,7 @@ h3 {
 }
 
 section {
-  padding: 64px 0;
+  padding-bottom: 64px;
 }
 
 .visually-hidden {
@@ -95,7 +95,7 @@ body.no-scroll {
 
   }
   section {
-    padding: 100px 0;
+    padding-bottom: 100px;
   }
 }
 
