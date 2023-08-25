@@ -33,3 +33,78 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--blue-font);
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+h2,
+h3 {
+  font-size: 28px;
+}
+
+section {
+  padding: 64px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.container {
+  max-width: 343px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 704px;
+  }
+  section {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
