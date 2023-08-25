@@ -30,7 +30,6 @@ img {
   height: auto;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -44,9 +43,9 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--blue-font);
-
   font-size: 16px;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 h1 {
@@ -70,8 +69,6 @@ section {
 .list {
   list-style-type: none;
 }
-
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -99,7 +96,6 @@ body.no-scroll {
 @media screen and (min-width: 768px) {
   body {
     font-size: 18px;
-    line-height: 1.5;
   }
 
   .container {
