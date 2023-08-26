@@ -46,10 +46,10 @@
 
 /* Media */
 
-@media screen and (max-width: 374px) {
-    .special-container {
+@media screen and (max-width: 374px){
+    .special-container{
         padding: 0 16px;
-    }   
+    }
 }
 
 @media screen and (min-width: 768px) {
