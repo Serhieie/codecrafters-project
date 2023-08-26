@@ -13,10 +13,17 @@
   align-items: center;
   padding-top: 6px;
   margin-bottom: 42px;
+  transition: transform 300ms ease-in-out;
+}
+
+.footer-logo-link:hover,
+.footer-logo-link:focus {
+  transform: scale(1.02);
 }
 
 .footer-logo {
   fill: var(--white);
+  transform: scale(1);
 }
 
 .icon-link {
