@@ -28,7 +28,8 @@
   transition: transform 300ms ease-in-out;
 }
 
-.icon-link:hover {
+.icon-link:hover,
+.icon-link:focus {
   transform: scale(1.2);
 }
 
@@ -56,6 +57,7 @@
 }
 
 .footer-nav-link {
+  display: flex;
   position: relative;
   color: var(--white);
   transform: scale(1);
@@ -93,11 +95,17 @@
 }
 
 .footer-address {
+  display: flex;
   color: var(--white);
   line-height: normal;
   letter-spacing: 0.01em;
+  transition: transform 300ms ease-in-out;
 }
 
+.footer-address:hover,
+.footer-address:focus {
+  transform: scale(1.02);
+}
 .footer-tel-list {
   display: flex;
   flex-direction: column;
@@ -112,9 +120,16 @@
 }
 
 .footer-tel {
+  display: flex;
   color: var(--white);
   line-height: normal;
   letter-spacing: 0.01em;
+  transition: transform 300ms ease-in-out;
+}
+
+.footer-tel:hover,
+.footer-tel:focus {
+  transform: scale(1.02);
 }
 .email {
   display: none;
@@ -136,7 +151,14 @@
 }
 
 .bottom-text-link {
+  display: inline-flex;
   text-decoration-line: underline;
+  transition: transform 300ms ease-in-out;
+}
+
+.bottom-text-link:hover,
+.bottom-text-link:focus {
+  transform: scale(1.02);
 }
 
 @media screen and (max-width: 374px) {
@@ -181,10 +203,15 @@
   }
 
   .email {
-    display: block;
+    display: flex;
     color: var(--white, #fff);
+    transition: transform 300ms ease-in-out;
   }
 
+  .email:hover,
+  .email:focus {
+    transform: scale(1.02);
+  }
   .address {
     font-size: 19px;
     line-height: normal;
@@ -223,7 +250,6 @@
   }
 
   .footer-navigation {
-    padding: 8px;
     margin-left: 336px;
   }
 
