@@ -1,34 +1,39 @@
+.abs-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.abs-general{
+    padding: 64px 16px;
+    background-color: var(--light-blue);
+    width: 375px;
+}
 .abs-title{
     color: var(--blue-font);
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5;
     margin-left: 50px;
+    position: relative;
 }
 
-/* .abs-line::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    transform: translateY(-50%);
-    width: 5px;
-    height: 100%;
-    background-color: var(--hover-color, #061835);
-  } */
+.abs-promotion{
+    width: 343px;
+    margin: auto;
+}
 
 .abs-line::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 16px;
+    top: 10px;
+    left: -50px;
     width: 30px;
     height: 1px;
     background-color:var(--blue-font);
   }
 
 .abs-subtitle{
-    margin: 30px 0;
+    margin-top: 30px;
     color: var(--blue-font);
     font-size: 28px;
     font-weight: 400;
@@ -39,8 +44,6 @@
     margin-top: 30px;
     color: var(--blue-font);
     font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
 }
 
 .abs-advantages{
@@ -48,31 +51,111 @@
     margin: auto;
 }
 
-.abs-advantages-list{
-    margin-top: 30px;
-    gap: 30px;
-}
-
 .abs-subtitle-advantages{
+    margin-top: 30px;
     color: var(--blue-font);
     text-align: center;
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5;
     text-transform: uppercase;
 }
 
 .abs-description-advantages{
-    margin-top: 16px;
+    margin-top: 14px;
     color: var(--blue-font);
     text-align: center;
     font-family: Roboto;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
 }
 
 .abs-img{
-    margin-top: 64px;
+    width: 375px;
+    height: 400px;
+}
+
+.abs-img-med{
+    height: 100%;
+    width: 100%;
+	object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+
+    .abs-section{
+        padding: 100px 0;
+    }
+    
+    .abs-general{
+        width: 704px;
+        padding: 36px 16px;
+        margin-bottom: 30px;
+    }
+
+    .abs-promotion{
+        width: 576px;
+    }
+
+    .abs-subtitle{
+    font-size: 32px;
+    line-height: 1.4;
+    }
+
+    .abs-description{
+    font-size: 18px;
+    }
+
+    .abs-advantages{
+        width: 576px;
+    }
+
+    .abs-advantages-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 33px;
+    }
+
+    .abs-description-advantages{
+        width: 170px;
+    }
+
+    .abs-img{
+        width: 704px;
+        height: 540px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .abs-section{
+        padding: 100px 0;
+    }
+
+    .abs-general{
+        width: 760px;
+        height: 500px;
+        margin-bottom: 0;
+        margin-right: 24px;
+        padding: 36px 69px 37px 69px;
+    }
+
+    .abs-section{
+        align-items: center;
+    }
+
+    .abs-general{
+        width: 760px;
+        height: 500;
+        margin-right: 24px;
+    }
+
+    .abs-promotion{
+        width: 622px;
+    }
+
+    .abs-img{
+        width: 536px;
+        height: 540px;
+    }
 }
