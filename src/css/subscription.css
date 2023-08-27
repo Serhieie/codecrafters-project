@@ -12,7 +12,7 @@
   text-align: center;
 }
 .text-subscription {
-  width: 343px;
+  max-width: 343px;
   margin-bottom: 20px;
 }
 .form-subscription {

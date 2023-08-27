@@ -93,6 +93,12 @@ body.no-scroll {
   margin: 0 auto;
 }
 
+@media screen  and (max-width: 374px ) { 
+  .container {
+    padding: 0 16px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   body {
     font-size: 18px;
