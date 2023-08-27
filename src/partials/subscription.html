@@ -49,10 +49,12 @@
       <picture>
         <source
           class="image-subscription"
-          srcset="./img/img-mobile/product14x1-mobile.jpg x1, ./img/img-mobile/product14x2-mobile.jpg "
-          media=" (max-width: 767px)"
+          srcset="
+            ./img/img-desktop/prosuct14x1-desktop.jpg 1x,
+            ./img/img-desktop/prosuct14x2-desktop.jpg 2x
+          "
+          media=" (min-width: 1440px)"
         />
-
         <source
           class="image-subscription"
           srcset="
@@ -61,17 +63,17 @@
           "
           media=" (min-width: 768px)"
         />
-
         <source
           class="image-subscription"
-          srcset="./img/sub-prod-14x1.jpg 1x, ./img/sub-prod-14x2.jpg 2x"
-          media=" (min-width: 1440px)"
+          srcset="./img/img-mobile/product14x1-mobile.jpg x1, 
+          ./img/img-mobile/product14x2-mobile.jpg "
+          media=" (max-width: 767px)"
         />
-        
+
         <img
           class="image-subscription"
           src="./img/img-mobile/product14x1-mobile.jpg"
-          alt="product14"
+          alt="Bank application interface"
         />
       </picture>
     </div>
