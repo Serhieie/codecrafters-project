@@ -5,9 +5,10 @@
 .container-subscription {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .title-subscription {
+  font-weight: 400;
   font-size: 28px;
   line-height: 1.4;
   text-transform: uppercase;
@@ -21,7 +22,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+}
+.in-sub {
+  max-width: 343px;
+  height: 50px;
+  padding: 11px 20px;
+  border: 1px solid var(--dark-grey);
+}
+.in-sub:active,
+.in-sub:focus,
+.in-sub:hover {
+  border-color: 1px solid var(--blue-font);
 }
 .button-subscription {
   display: flex;
@@ -40,6 +52,10 @@
   line-height: 1.33;
   cursor: pointer;
   border: none;
+}
+.button-subscription:hover,
+.button-subscription:focus {
+  background-color: var(--hover-color);
 }
 .checkbox-label-subscriotion {
   display: flex;
@@ -78,7 +94,7 @@
 }
 .subscription-image-container {
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
   max-width: 343px;
   max-height: 300px;
 }
@@ -106,6 +122,9 @@ justify-content: space-between;
   .input-subsription::placeholder {
     font-size: 18px;
   }
+  .in-sub {
+    max-width: 536px;
+  }
   .button-subscription {
     font-size: 18px;
   }
@@ -118,7 +137,8 @@ justify-content: space-between;
   .container-subscription {
     display: flex;
     flex-direction: row;
-justify-content: space-between;
+    justify-content: space-between;
+    gap: 30px;
   }
   .label-subscription {
     font-size: 18px;
@@ -127,12 +147,18 @@ justify-content: space-between;
     font-size: 32px;
     text-align: left;
   }
+  .form-subscription {
+    gap: 30px;
+  }
   .subscription {
     padding-top: 100px;
     padding-bottom: 86px;
   }
   .input-subsription::placeholder {
     font-size: 18px;
+  }
+  .in-sub {
+    max-width: 496px;
   }
   .button-subscription {
     font-size: 18px;
