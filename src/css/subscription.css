@@ -8,21 +8,20 @@
   gap: 30px;
 }
 .title-subscription {
-  color: var(--blue-font);
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.4;
   text-transform: uppercase;
   margin-bottom: 31px;
   text-align: center;
 }
-.text-subcsription {
-  margin-bottom: 21px;
+.text-subscription {
+  margin-bottom: 20px;
 }
 .form-subscription {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 21px;
+  gap: 30px;
 }
 .button-subscription {
   display: flex;
@@ -36,7 +35,6 @@
   background-color: var(--blue-font);
   color: var(--white);
   font-family: Roboto;
-  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.33;
@@ -46,11 +44,9 @@
 .checkbox-label-subscriotion {
   display: flex;
   align-items: center;
-  margin-bottom: 45px;
 }
 .label-subscription {
   color: var(--dark-grey);
-  font-size: 16px;
   display: flex;
   align-items: center;
 }
@@ -64,15 +60,12 @@
   margin-right: 8px;
   fill: transparent;
   transition-duration: 300ms;
+  transition: all 250ms ease-in-out;
 }
 .checkbox-subscriotion:checked + .label-subscription span {
+  border: none;
   fill: var(--white);
   background-color: var(--hover-color);
-}
-.input-subsription::placeholder {
-  color: var(--light-grey);
-  font-size: 18px;
-  line-height: 1.5;
 }
 .picture-subscription {
   margin-left: 100px;
@@ -82,11 +75,10 @@
   height: 50px;
   padding: 11px 20px;
   border: 1px solid var(--dark-grey);
-  margin-bottom: 20px;
 }
 .subscription-image-container {
   display: flex;
-  flex-direction: column;
+justify-content: space-between;
   max-width: 343px;
   max-height: 300px;
 }
@@ -94,16 +86,15 @@
   width: 100%;
   height: 100%;
 }
+
 @media screen and (min-width: 768px) {
   .subscription-image-container {
     max-width: 704px;
     max-height: 396px;
   }
-}
-@media screen and (min-width: 1440px) {
-  .subscription-image-container {
-    max-width: 460px;
-    max-height: 410px;
+  .title-subscription {
+    font-size: 32px;
+    text-align: left;
   }
   .label-subscription {
     font-size: 18px;
@@ -111,5 +102,39 @@
   .subscription {
     padding-top: 100px;
     padding-bottom: 86px;
+  }
+  .input-subsription::placeholder {
+    font-size: 18px;
+  }
+  .button-subscription {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .subscription-image-container {
+    max-width: 460px;
+    max-height: 410px;
+  }
+  .container-subscription {
+    display: flex;
+    flex-direction: row;
+justify-content: space-between;
+  }
+  .label-subscription {
+    font-size: 18px;
+  }
+  .title-subscription {
+    font-size: 32px;
+    text-align: left;
+  }
+  .subscription {
+    padding-top: 100px;
+    padding-bottom: 86px;
+  }
+  .input-subsription::placeholder {
+    font-size: 18px;
+  }
+  .button-subscription {
+    font-size: 18px;
   }
 }
