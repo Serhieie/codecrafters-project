@@ -53,7 +53,7 @@
     color: var(--light-blue);
     max-width: 250px;
     font-size: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-weight: 700;
     text-transform: capitalize;
   }
@@ -79,15 +79,43 @@
     display: none;
    }
 
+   .close-button-msg {
+    background-color: rgba(15, 53, 81, 0.60);
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 18px;
+    width: 180px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    height: 40px;
+   }
+
+   .close-button-msg:hover,
+   .close-button-msg:focus {
+    background-color: rgba(15, 53, 81, 0.95);
+   }
 
   @media screen and (min-width: 768px) {
+
+    .close-button-msg {
+      background-color: rgba(15, 53, 81, 0.60);
+      border: none;
+      cursor: pointer;
+      color: var(--white);
+      font-size: 18px;
+      width: 180px;
+      border-top-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      height: 40px;
+     }  
+
     .logo-use-thx-one {
         transform: translate(70%, 10%) scale(0.25);
         
       }
       .thx-logo-container  {
         width: 680px;
-        height: 500px;
       }
     
       .logo-use-thx-two {
@@ -102,12 +130,24 @@
       }
 
       .thanks {
-        font-size: 36px;
+        font-size: 30px;
         max-width: 430px;
       }
   }
   
   @media screen and (min-width: 1440px) {
+
+    .close-button-msg {
+      background-color: rgba(15, 53, 81, 0.60);
+      border: none;
+      cursor: pointer;
+      color: var(--white);
+      font-size: 18px;
+      width: 180px;
+      border-radius: 0 16px 16px 16px;
+      height: 50px;
+     }  
+
     .logo-use-thx-one,
     .logo-use-thx-two {
         display: none;
@@ -127,7 +167,8 @@
         border-radius: 0 150px 150px 150px;
       }
       .thanks {
-        font-size: 50px;
+        font-size: 46px;
+        margin-bottom: 40px;
         max-width: 650px;
         font-family: 'Playfair Display', serif;
         color: white;

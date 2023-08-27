@@ -1,7 +1,7 @@
 
 (() => {
 const btnOpn = document.querySelector(".open-button")
-const clsBtn = document.querySelector(".close-button")
+const clsBtn = document.querySelector(".close-button-msg")
 const thanksMsg = document.querySelector(".thanks-container")
 const backdrop = document.querySelector(".backdrop")
 
