@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/codecrafters-project/assets/android-chrome-192x192-b51ab593.png">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA8RJREFUWEftl39MlHUcx1/PcyFwMqD4lWiscrVWWv1hFP5T5+TAarF0EQPbdKDpgpYRd6EgSMCKDWgWY+S5OEAtJakY03AuVCRK/8AolB9xTVhtlhH2C3nOe9pztPOe7jnuuJmu1efP5z6fz/f1+fF9P88JsQkrZG6QycgI/wO4dyA6OpLJyV+RJPs/MpSYmEgmJi5htzuc+VUjiIu7he6j7/LDjxPsqGzgkyOfKR7XxMIj9Ji2rGP9c2nsO3CI/FdrERDcAWR21ph5dk2K68CuE6coKqtjeHgsYBDxJpG1Gaswv7ye6KibnbkdDgfGpzbT3z9yFSAiIoxzfW2IoqiqWLLbsbZ8RFWNlcnJ3/zuhtLapIeXUlGay5J77/KIa3mvg3xTDbLgugUyG7JXU/DSOiLCwzwCLv70M1W1jezZ14EkzczPmyUkxLG9cCNPPv4YgoZT7xdnKNhay9DwmHoHEGSioyKpLMsj7QmDZv6zg6MU7aiju6fPYyyh+mByN2eQ+3wGIcHzPOL/mLrMFlMVH7Z3If9Vg6YOpCQ/QpOlYtYqOw4fp6zyHb49/z2CAE+nGSg2byR+QazXuHNDNh415qjAPQBkWSbVuJwmS7nPeV+enqZpbzsPLLmbxGVLffoPDNowGLPBbTCaAKuMy7G6AbS2dfKNbZy8TZno9SE+D1IcvvxqiLI3Gmhtrnb5Bwywu7mNrcVvs+DWKAoLsklfbURQ+q5hFy5cpLJ6N+8f6ESnExkf7vwbQI4qyq8O7Gpspbi0HlmeUa7EZfdRXvICD95/jyuZopyWxg+o3tnCL5d+dz4PChIZHzniBjCKQdmBuY5AASgqqVeRL75zET2fWl3Pjp88zTOZZpWPJ0CAO2CxHmTb9jpV8jtuX0jvsSbXs64Tp0nPMqlGMy9IZEzVgQABlE0vKHzzxgFY97Zjul4ASpkpyUkqHbi2HfBxCxSA1OQklQ7UW/ZT+lrDnEegvYR+ALh34IrDQfraV+g+eWbOAIJOxjZwiNCQYGfsjBD5AbDS8BB7Gl/n67MjbCt5i57P+50fD+7mzy1QNCMrM5Xy4jzm60MZGBxlRUoOsnw1l6YQ6eeHsNKQyOHOHiTpiqbi+QOgBCpHxS+Koci8AWla4sX8Kt9CJIqCU/VmM38B3HMo8q287Nwt4M/yQAC0Cvo3A8TTe6zZTYpPkZ5l9vqW9DbOgDsQGxdJX+9+dKLOmfvgx0fZlFtx/QAU8tsWxhIeFuq8Vrbz3zE1Jc2+uRq/BtyBOZ/kJeC/BaBU6/kXS+BP6YE2n+7gFTYAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" sizes="96x96" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA8RJREFUWEftl39MlHUcx1/PcyFwMqD4lWiscrVWWv1hFP5T5+TAarF0EQPbdKDpgpYRd6EgSMCKDWgWY+S5OEAtJakY03AuVCRK/8AolB9xTVhtlhH2C3nOe9pztPOe7jnuuJmu1efP5z6fz/f1+fF9P88JsQkrZG6QycgI/wO4dyA6OpLJyV+RJPs/MpSYmEgmJi5htzuc+VUjiIu7he6j7/LDjxPsqGzgkyOfKR7XxMIj9Ji2rGP9c2nsO3CI/FdrERDcAWR21ph5dk2K68CuE6coKqtjeHgsYBDxJpG1Gaswv7ye6KibnbkdDgfGpzbT3z9yFSAiIoxzfW2IoqiqWLLbsbZ8RFWNlcnJ3/zuhtLapIeXUlGay5J77/KIa3mvg3xTDbLgugUyG7JXU/DSOiLCwzwCLv70M1W1jezZ14EkzczPmyUkxLG9cCNPPv4YgoZT7xdnKNhay9DwmHoHEGSioyKpLMsj7QmDZv6zg6MU7aiju6fPYyyh+mByN2eQ+3wGIcHzPOL/mLrMFlMVH7Z3If9Vg6YOpCQ/QpOlYtYqOw4fp6zyHb49/z2CAE+nGSg2byR+QazXuHNDNh415qjAPQBkWSbVuJwmS7nPeV+enqZpbzsPLLmbxGVLffoPDNowGLPBbTCaAKuMy7G6AbS2dfKNbZy8TZno9SE+D1IcvvxqiLI3Gmhtrnb5Bwywu7mNrcVvs+DWKAoLsklfbURQ+q5hFy5cpLJ6N+8f6ESnExkf7vwbQI4qyq8O7Gpspbi0HlmeUa7EZfdRXvICD95/jyuZopyWxg+o3tnCL5d+dz4PChIZHzniBjCKQdmBuY5AASgqqVeRL75zET2fWl3Pjp88zTOZZpWPJ0CAO2CxHmTb9jpV8jtuX0jvsSbXs64Tp0nPMqlGMy9IZEzVgQABlE0vKHzzxgFY97Zjul4ASpkpyUkqHbi2HfBxCxSA1OQklQ7UW/ZT+lrDnEegvYR+ALh34IrDQfraV+g+eWbOAIJOxjZwiNCQYGfsjBD5AbDS8BB7Gl/n67MjbCt5i57P+50fD+7mzy1QNCMrM5Xy4jzm60MZGBxlRUoOsnw1l6YQ6eeHsNKQyOHOHiTpiqbi+QOgBCpHxS+Koci8AWla4sX8Kt9CJIqCU/VmM38B3HMo8q287Nwt4M/yQAC0Cvo3A8TTe6zZTYpPkZ5l9vqW9DbOgDsQGxdJX+9+dKLOmfvgx0fZlFtx/QAU8tsWxhIeFuq8Vrbz3zE1Jc2+uRq/BtyBOZ/kJeC/BaBU6/kXS+BP6YE2n+7gFTYAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAeFJREFUOE9jFJNz+s9AJvjP8J+BEWQAKysLw58/fxn+/yfOLIj6Pwz//kMNmD29lkFWWoKhpnEKw5mz13G6h5GRgcHf14GhviqdYebctQzTZ69mYJRScv1/YNdsBlVlebAL1m7Yw9DSOYfh+fM3KAbp6aoyNNdnM1iY6oLFV63dxZBT1AHzAjPDikUdDDZWRmDJb99+MEyatgxsAy8vF0NFSTJDVJgnAxMTI1h+yozlDM0dc8AWgsMAxJg5pYYh0M+J4ez5awyG+hoMTExMDE+fvWLg4+Vm4OXlZvj69TvDg0fPGLQ1lRnKaiYyLFy8iQEeiMgGRCVWMDx/8ZahrSGHwdJcH2wLyLmtXXMYEmL8GIryYvEbEJlQwbBv/2kGQUE+hhsX1oNtNbeNBTu9vDieoSgvDr8BMUnVDLv3nmAQFOBjuHFxPcODh88YzGxjGBgZGXEbADJ9xuRqcBhEJVQy7N1/inQDpk+qYpCSEmWIS65l+PjxC1YD/PzsGWZMrGGoqpvMsAA9EMXFhBhev/kAT43YvAByqY6OCsPP7z8Zbt99jIgFbEkPlwHIauHRiM0APj5uhluXNzLcvfuYwcoxARyI6ACvASDFQoK8DL9+/WH48vU71vxB0ABcuQqkEQYAdhoNUK94mUwAAAAASUVORK5CYII=">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <!--Підключення фавіконки-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture & Home Decor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script type="module" crossorigin src="/codecrafters-project/assets/index-701d3a68.js"></script>
+    <link rel="stylesheet" href="/codecrafters-project/assets/index-9020dc5b.css">
+  </head>
+  <body class="body slide">
+    <!-- Bohdan Serhieiev -->
+    <header class="header">
+    <div class="header-container container">
+        <a href="./index.html" class="logo link">
+          <svg class="logo-svg" width="100" height="16">
+            <use
+              class="logo-use"
+              xlink:href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-logo"
+            ></use></svg></a>
+        <button
+          class="header-menu-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="header-navigation"
+        >
+          <svg
+            class="header-icon header-icon-burger"
+            width="20"
+            height="20"
+            aria-label="Mobile menu switcher"
+          >
+            <use
+              class="header-icon header-icon-mobile icon"
+              xlink:href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-menu"
+            ></use>
+          
+          </svg>
+        </button>
+        <nav class="header-navigation"> 
+            <ul class="header-nav-list list" id="menu">
+              <li class="header-nav-list-items">
+                <a href="#minimal-about-us" class="header-nav-link link"
+                  >About us </a>
+              </li>
+              <li class="header-nav-list-items">
+                <a href="#minimal-our-products" class="header-nav-link link">Our products </a>
+              </li>
+              <li class="header-nav-list-items">
+                <a href="#minimal-prices" class="header-nav-link link">Prices </a>
+              </li>
+              <li class="header-nav-list-items">
+                <a href="#minimal-bestsellers" class="header-nav-link link">Bestsellers </a>
+              </li>
+              <li class="header-nav-list-items">
+                <a href="#minimal-clients" class="header-nav-link link">Reviews </a>
+              </li>
+              <li class="header-nav-list-items">
+                <a href="#minimal-footer" class="header-nav-link link">Contacts </a>
+              </li>
+            </ul>
+      </nav>
+    </div>
+  </header>
+    <main>
+      <!-- Olesya -->
+      <section class="hero">
+  <!--id="minimal-hero"-->
+  <div class="container hero-container">
+    <div class="hero-title-container">
+      <h1 class="hero-title">Modern and minimalist furniture for you</h1>
+    </div>
+    <div class="hero-desktop-container">
+      <p class="hero-text">
+        Add a touch of elegance to your space with handcrafted furniture pieces
+      </p>
+      <button type="button" class="hero-btn">
+        <a href="#minimal-subscription" class="hero-subscribe-link">Subscribe</a>
+        <!--Потрібно поставити id на секцію Newsletter, аби працювало якірне посилання-->
+      </button>
+    </div>
+  </div>
+</section>
+
+      <!-- Shpytko Dmitriy -->
+      <section class="abs-section" id="minimal-about-us">
+    <div class="abs-general">
+        <div class="abs-promotion">
+            <h2 class="abs-title abs-line">
+                About us
+            </h2>
+            <h3 class="abs-subtitle">
+                Our craftsmanship: creating unique handmade furniture
+            </h3>
+            <p class="abs-description">
+                Discover the inspiration behind our modern and minimalist designs, 
+                and see how we bring them to life through our skilled craftsmanship.
+            </p>
+        </div>
+        <div class="abs-advantages">
+            <ul class="abs-advantages-list">
+                <li class="abs-advantages-item">
+                    <h3 class="abs-subtitle-advantages">
+                        5+
+                    </h3>
+                    <p class="abs-description-advantages">
+                        Years of experience creating handcrafted furniture
+                    </p>
+                </li>
+                <li class="abs-advantages-item">
+                    <h3 class="abs-subtitle-advantages">
+                        100%
+                    </h3>
+                    <p class="abs-description-advantages">
+                        Sustainably sourced materials used in all of our furniture 
+                    </p>
+                </li>
+                <li class="abs-advantages-item">
+                    <h3 class="abs-subtitle-advantages">
+                        500+
+                    </h3>
+                    <p class="abs-description-advantages">
+                        Unique furniture designs crafted by our skilled artisans
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="abs-img">
+        <picture>
+            <source 
+            class="abs-img-med" 
+            srcset="/codecrafters-project/assets/product4x1-tablet-0546e88a.jpg 1x, /codecrafters-project/assets/product4x2-tablet-6ba99c69.jpg 2x" 
+            media="(min-width: 1440px)">
+            <source 
+            class="abs-img-med" 
+            srcset="/codecrafters-project/assets/product4x1-desctop-8edb73a4.jpg 1x, /codecrafters-project/assets/product4x2-desctop-b3cec22f.jpg 2x" 
+            media="(min-width: 768px)">
+            <source 
+            class="abs-img-med" 
+            srcset="/codecrafters-project/assets/product4x1-mobile-d6903109.jpg 1x, /codecrafters-project/assets/product4x2-mobile-d3f3a9ce.jpg 2x" 
+            media="(min-width: 320px)">
+            <img 
+            class="abs-img-med" 
+            src="/codecrafters-project/assets/product4x1-mobile-d6903109.jpg" 
+            alt="white sofa and flower pot and chairs">
+        </picture>
+    </div>
+</section>
+      <!-- Dmytro Hleba -->
+      
+<section id="minimal-prices">
+    <div class="container">
+        <div class="special-container">
+            <h2 class="visually-hidden">Chairs Tables Dressers Sofas</h2>
+            <ul class="price-list">
+                <li class="price-item">
+                    <p class="price-item-text">Chairs</p>
+                    <p class="price-item-cost">from 200$</p>
+                </li>
+                <li class="price-item">
+                    <p class="price-item-text">Tables</p>
+                    <p class="price-item-cost">from 250$</p>
+                </li>
+                <li class="price-item">
+                    <p class="price-item-text">Dressers</p>
+                    <p class="price-item-cost">from 300$</p>
+                </li>
+                <li class="price-item">
+                    <p class="price-item-text">Sofas</p>
+                    <p class="price-item-cost">from 500$</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Марія Смаль -->
+      <section class="products" id="minimal-our-products">
+  <div class="container">
+    <h2 class="products-title">OUR PRODUCTS</h2>
+    <ul class="products-list">
+      <li class="products-item">
+        <a href="#" class="our-products-link">
+          <picture>
+            <source
+              srcset="/codecrafters-project/assets/product5х1-desctop-small-85f35d4a.jpg 1x, /codecrafters-project/assets/product5х2-desctop-small-fc866990.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/codecrafters-project/assets/product5x1-tablet-f7396a03.jpg 1x, /codecrafters-project/assets/product5x2-tablet-72d69fe4.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/codecrafters-project/assets/product5x1-mobile-f2a42267.jpg 1x, /codecrafters-project/assets/product5x2-mobile-0c1fef1a.jpg 2x"
+              media="(min-width: 320px)"
+            />
+            <img
+              src="/codecrafters-project/assets/product5х1-desctop-small-85f35d4a.jpg"
+              alt="table"
+            />
+          </picture>
+          <p class="products-text">Minimalist storage solutions</p>
+        </a>
+      </li>
+      <li class="products-item mobile-op">
+        <a href="#" class="our-products-link">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="/codecrafters-project/assets/product6х1-desctop-small-6378133b.jpg 1x, /codecrafters-project/assets/product6х2-desctop-small-05604f7f.jpg 2x"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="/codecrafters-project/assets/product6x1-tablet-21cbe42f.jpg 1x, /codecrafters-project/assets/product6x2-tablet-809323af.jpg 2x"
+            />
+            <img
+              src="/codecrafters-project/assets/product6х1-desctop-small-6378133b.jpg"
+              alt="sofa"
+            />
+          </picture>
+          <p class="products-text">Handcrafted minimalist seating</p>
+        </a>
+      </li>
+      <li class="products-item mobile-op tablet-op">
+        <a href="#" class="our-products-link">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="/codecrafters-project/assets/product7х1-desctop-small-80c54e52.jpg 1x, /codecrafters-project/assets/product7х2-desctop-small-45062908.jpg 2x"
+            />
+            <img
+              src="/codecrafters-project/assets/product7х1-desctop-small-80c54e52.jpg"
+              alt="table"
+            />
+          </picture>
+          <p class="products-text">Sleek and simple tables</p>
+        </a>
+      </li>
+      <li class="products-item mobile-op tablet-op">
+        <a href="#" class="our-products-link">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="/codecrafters-project/assets/product8х1-desctop-small-7db4e4db.jpg 1x, /codecrafters-project/assets/product8х2-desctop-small-e300c843.jpg 2x"
+            />
+            <img
+              src="/codecrafters-project/assets/product8х1-desctop-small-7db4e4db.jpg"
+              alt="chair"
+            />
+          </picture>
+          <p class="products-text">Minimalist seating for every space</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <!-- Dmytro Kashuba -->
+      
+<section class="bestsellers" id="minimal-bestsellers">
+  <div class="container">
+    <h2 class="bestsellers-title">Bestsellers</h2>
+    <div class="bestsellers-container">
+      <div class="bestsellers-left-side">
+        <picture>
+          <source
+            srcset="/codecrafters-project/assets/product9x1-desctop-a2e2f36b.jpg 1x, /codecrafters-project/assets/product9x2-desctop-5518c418.jpg 2x"
+            media="(min-width:1440px)"
+          />
+          <source
+            srcset="/codecrafters-project/assets/product9x1-tablet-d966c067.jpg 1x, /codecrafters-project/assets/product9x2-tablet-7e06fa9c.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="/codecrafters-project/assets/product9x1-mobile-75b101ce.jpg 1x, /codecrafters-project/assets/product9x2-mobile-fc06cff9.jpg 2x"
+            media="(min-width:320px)"
+          />
+          <img
+            class="bestsellers-first-img"
+            src="/codecrafters-project/assets/product9x1-desctop-a2e2f36b.jpg"
+            alt="The modern platform bed"
+            width="704"
+          />
+        </picture>
+        <h3 class="bestsellers-item-title">The modern platform bed</h3>
+        <p class="bestsellers-item-text">750$</p>
+      </div>
+      <div class="bestsellers-right-side">
+        <ul class="bestsellers-right-list">
+          <li class="bestsellers-right-item">
+            <picture>
+              <source
+                srcset="/codecrafters-project/assets/product10x1-desctop-e61cbd48.jpg 1x, /codecrafters-project/assets/product10x2-desctop-53fdb8ca.jpg 2x"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="/codecrafters-project/assets/product10x1-tablet-8f6d32a4.jpg 1x, /codecrafters-project/assets/product10x2-tablet-d72614e5.jpg 2x"
+                media="(min-width:768px)"
+              />
+              <source
+                srcset="/codecrafters-project/assets/product10x1-mobile-63464eed.jpg 1x, /codecrafters-project/assets/product10x2-mobile-8e5b7594.jpg 2x"
+                media="(min-width:320px)"
+              />
+              <img
+                class="bestsellers-img"
+                src="/codecrafters-project/assets/product10x1-desctop-e61cbd48.jpg"
+                alt="The Cozy Lounge Chair"
+                width="343"
+              />
+            </picture>
+            <h3 class="bestsellers-item-title">The Cozy Lounge Chair</h3>
+            <p class="bestsellers-item-text">230$</p>
+          </li>
+          <li class="bestsellers-right-item">
+            <picture>
+              <source
+                srcset="/codecrafters-project/assets/product11x1-desctop-9f418c7e.jpg 1x, /codecrafters-project/assets/product11x2-desctop-4bef19f0.jpg 2x"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="/codecrafters-project/assets/product11x1-tablet-f1dd09f2.jpg 1x, /codecrafters-project/assets/product11x2-tablet-41a14f8e.jpg 2x"
+                media="(min-width:768px)"
+              />
+              <source
+                srcset="/codecrafters-project/assets/product11x1-mobile-52906aed.jpg 1x, /codecrafters-project/assets/product11x2-mobile-7d052707.jpg 2x"
+                media="(min-width:320px)"
+              />
+              <img
+                class="bestsellers-img"
+                src="/codecrafters-project/assets/product11x1-desctop-9f418c7e.jpg"
+                alt="The industrial accent chair"
+                width="343"
+              />
+            </picture>
+            <h3 class="bestsellers-item-title">The industrial accent chair</h3>
+            <p class="bestsellers-item-text">250$</p>
+          </li>
+          <li class="bestsellers-right-item">
+            <picture>
+              <source
+                srcset="/codecrafters-project/assets/product12x1-desctop-2fdb75c2.jpg 1x, /codecrafters-project/assets/product12x2-desctop-11c7e82d.jpg 2x"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="/codecrafters-project/assets/product12x1-tablet-52ab82bd.jpg 1x, /codecrafters-project/assets/product12x2-tablet-7f794d74.jpg 2x"
+                media="(min-width:768px)"
+              />
+              <img
+                class="bestsellers-img"
+                src="/codecrafters-project/assets/product12x1-desctop-2fdb75c2.jpg"
+                alt="The sleek stand"
+                width="343"
+              />
+            </picture>
+            <h3 class="bestsellers-item-title">The sleek stand</h3>
+            <p class="bestsellers-item-text">300$</p>
+          </li>
+          <li class="bestsellers-right-item">
+            <picture>
+              <source
+                srcset="/codecrafters-project/assets/product13x1-desctop-b53130a3.jpg 1x, /codecrafters-project/assets/product13x2-desctop-b946612a.jpg 2x"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="/codecrafters-project/assets/product13x1-tablet-c6a9b260.jpg 1x, /codecrafters-project/assets/product13x2-tablet-4cdeafec.jpg 2x"
+                media="(min-width:768px)"
+              />
+              <img
+                class="bestsellers-img"
+                src="/codecrafters-project/assets/product13x1-desctop-b53130a3.jpg"
+                alt="The minimalist sofa"
+                width="336"
+              />
+            </picture>
+            <h3 class="bestsellers-item-title">The minimalist sofa</h3>
+            <p class="bestsellers-item-text">650$</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Maxim Fedorak -->
+      <section id="minimal-clients">
+  <div class="client-container">
+    <div class="container client-reviews-container">
+      <h2 class="client-title">Clients reviews</h2>
+      <ul class="client-list list">
+        <li class="client-item">
+          <div class="user-container user">
+            <img
+              class="client-img"
+              src="/codecrafters-project/assets/Ellipse1-6617bafd.png"
+              alt="image-client1"
+            />
+            <div class="client-subtitle-div">
+              <p class="client-name">Alexandra dream</p>
+              <span class="client-date">1 week ago</span>
+            </div>
+          </div>
+
+          <p class="client-text">
+            I was blown away by the quality and craftsmanship of the furniture I
+            received from this company. Each piece was unique and beautifully
+            designed, and you can tell that a lot of thought and care goes into
+            every detail.
+          </p>
+        </li>
+        <li class="client-item">
+          <div class="user-container">
+            <img
+              class="client-img"
+              src="/codecrafters-project/assets/Ellipse2-df876d4f.png"
+              alt="image-client2"
+            />
+            <div class="client-subtitle-div">
+              <p class="client-name">James Williams</p>
+              <span class="client-date">A week ago</span>
+            </div>
+          </div>
+
+          <p class="client-text">
+            The "Minimal" furniture set is a fantastic addition to my home. It
+            boasts a minimalist design, enhancing the feel and look of my living
+            space. The sturdy construction is worth noting too, which speaks
+            volumes about its durability.
+          </p>
+        </li>
+        <li class="client-item">
+          <div class="user-container">
+            <img
+              class="client-img"
+              src="/codecrafters-project/assets/Ellipse3-7323a047.png"
+              alt="image-client3"
+            />
+            <div class="client-subtitle-div">
+              <p class="client-name">Emily Watson</p>
+              <span class="client-date">3 week ago</span>
+            </div>
+          </div>
+          <p class="client-text">
+            The "Minimal" furniture set has far exceeded my expectations. The
+            sleek design combined with the high-quality materials have not only
+            added an exceptional aesthetic to my space but also offered an
+            uncompromising standard of comfort.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <!-- Oksana Zholdak -->
+      <section id="minimal-subscription" class="subscription">
+  <div class="container container-subscription">
+    <div class="file-subscription">
+      <h2 class="title-subscription">NEWSLETTER</h2>
+      <p class="text-subscription">
+        Every week we will send you new designs and information about sales.
+      </p>
+
+      <form class="form-subscription">
+        <input
+          type="text"
+          name="user-text"
+          placeholder="Name"
+          class="input-subsription in-sub"
+          required
+        />
+
+        <input
+          type="email"
+          name="user-email"
+          placeholder="Email"
+          class="input-subsription in-sub"
+          required
+        />
+
+        <div class="checkbox-label-subscriotion">
+          <input
+            type="checkbox"
+            id="checkbox-subscriotion"
+            name="checkbox-subscriotion"
+            value="true"
+            class="checkbox-subscriotion visually-hidden"
+          />
+          <label for="checkbox-subscriotion" class="label-subscription">
+            <span>
+              <svg class="svg-subscription" width="13" height="13">
+                <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#check"></use>
+              </svg>
+            </span>
+            Agree to subscribe to the newsletter
+          </label>
+        </div>
+
+        <button type="submit" class="open-button  button-subscription">Send</button>
+      </form>
+    </div>
+
+    <div class="subscription-image-container">
+      <picture>
+        <source
+          class="image-subscription"
+          srcset="/codecrafters-project/assets/sub-prod-14x1-af22ec7d.jpg 1x, /codecrafters-project/assets/sub-prod-14x2-452ce8c0.jpg 2x"
+          media=" (min-width: 1440px)"
+        />
+        <source
+          class="image-subscription"
+          srcset="/codecrafters-project/assets/product14x1-tablet-fd08ac28.jpg 1x, /codecrafters-project/assets/product14x2-tablet-de65079f.jpg 2x"
+          media=" (min-width: 768px)"
+        />
+        <source
+          class="image-subscription"
+          srcset="/codecrafters-project/assets/product14x1-mobile-a8062eba.jpg x1, /codecrafters-project/assets/product14x2-mobile-32091611.jpg x2"
+          media=" (max-width: 767px)"
+        />
+        <img
+          class="image-subscription"
+          src="/codecrafters-project/assets/product14x1-mobile-a8062eba.jpg"
+          alt="new interior designs"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+      <!-- Bohdan Serhieiev -->
+      <div class="backdrop is-hidden"> 
+    <div class="thanks-container">
+        <svg class="thx-logo-container">
+        <use
+              class="logo-use-thx-one slide-in-left"
+              xlink:href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-logo"
+            ></use></svg>
+        <p class="thanks">Your details are received with gratitude. Expect to hear from us shortly.
+        </p>
+        <button type="button" class="close-button-msg">Close</button>
+        <svg class="thx-logo-container">
+        <use
+              class="logo-use-thx-two slide-in-right"
+              xlink:href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-logo"
+            ></use></svg>
+      </div>
+    </div>
+    </main>
+
+    <!-- Мария Степанова -->
+    <footer class="footer" id="minimal-footer">
+  <div class="container footer-container">
+    <a href="" class="footer-logo-link link">
+      <svg class="footer-logo" width="100" height="16">
+        <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-logo"></use>
+      </svg>
+    </a>
+    <ul class="footer-icon-list">
+      <li class="footer-icon">
+        <a
+          href="https://www.facebook.com/"
+          class="icon-link link"
+          target="_blank"
+        >
+          <svg class="icon">
+            <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-ph_facebook-logo"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-icon">
+        <a
+          href="https://www.instagram.com/"
+          class="icon-link link"
+          target="_blank"
+        >
+          <svg class="icon">
+            <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-ph_instagram-logo"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-icon">
+        <a
+          href="https://www.youtube.com/"
+          class="icon-link link"
+          target="_blank"
+        >
+          <svg class="icon">
+            <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-ph_youtube-logo"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <nav class="footer-navigation" id="minimal-footer">
+      <ul class="footer-nav-list list">
+        <li class="footer-nav-list-items">
+          <a href="#minimal-about-us" class="footer-nav-link link">About us </a>
+        </li>
+        <li class="footer-nav-list-items">
+          <a href="#minimal-our-products" class="footer-nav-link link"
+            >Our products
+          </a>
+        </li>
+        <li class="footer-nav-list-items">
+          <a href="#minimal-prices" class="footer-nav-link link">Prices </a>
+        </li>
+        <li class="footer-nav-list-items">
+          <a href="#minimal-bestsellers" class="footer-nav-link link"
+            >Bestsellers
+          </a>
+        </li>
+        <li class="footer-nav-list-items">
+          <a href="#minimal-clients" class="footer-nav-link link">Reviews </a>
+        </li>
+      </ul>
+    </nav>
+    <address class="address" id="contacts">
+      <ul class="footer-address-list list">
+        <li>
+          <a
+            class="footer-address link"
+            target="_blank"
+            href="https://www.google.com/maps/place/Obolonsky+Prospect,+14,+Kyiv"
+            >Obolonsky Prospect, 14, Kyiv</a
+          >
+        </li>
+        <li><p class="work-time">Daily 10:00-21:00</p></li>
+      </ul>
+      <ul class="footer-tel-list list">
+        <li class="tel-link">
+          <a class="footer-tel link" href="tel:+380669384758">+380669384758</a>
+        </li>
+        <li class="tel-link">
+          <a class="footer-tel link" href="tel:+380679384758">+380679384758</a>
+        </li>
+        <li class="email-link">
+          <a href="mailto:minimal.furniture@gmail.com" class="email link"
+            >minimal.furniture@gmail.com</a
+          >
+        </li>
+      </ul>
+    </address>
+    <div class="bottom-text-container">
+      <p class="bottom-text">
+        By using this website, you agree to the
+        <a class="bottom-text-link link" href="#">Terms of Service</a>
+        and
+        <a class="bottom-text-link link" href="#">Privacy Policy</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  </body>
+</html>
