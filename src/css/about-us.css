@@ -18,7 +18,7 @@
 }
 
 .abs-promotion{
-    width: 343px;
+    max-width: 343px;
     margin: auto;
 }
 
@@ -42,21 +42,17 @@
 
 .abs-description{
     margin-top: 30px;
-    color: var(--blue-font);
-    font-size: 16px;
 }
 
 .abs-advantages{
-    width: 170px;
+    max-width: 170px;
     margin: auto;
 }
 
 .abs-subtitle-advantages{
     margin-top: 30px;
-    color: var(--blue-font);
     text-align: center;
     font-size: 50px;
-    font-style: normal;
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -81,10 +77,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
-    .abs-section{
-        padding: 100px 0;
-    }
     
     .abs-general{
         width: 704px;
@@ -93,16 +85,16 @@
     }
 
     .abs-promotion{
-        width: 576px;
+        max-width: 576px;
     }
 
     .abs-subtitle{
-    font-size: 32px;
-    line-height: 1.4;
+        font-size: 32px;
+        line-height: 1.4;
     }
 
     .abs-description{
-    font-size: 18px;
+        font-size: 18px;
     }
 
     .abs-advantages{
@@ -128,13 +120,8 @@
 
 @media screen and (min-width: 1440px) {
 
-    .abs-section{
-        padding: 100px 0;
-    }
-
     .abs-general{
         width: 760px;
-        height: 500px;
         margin-bottom: 0;
         margin-right: 24px;
         padding: 36px 69px 37px 69px;
@@ -142,12 +129,6 @@
 
     .abs-section{
         align-items: center;
-    }
-
-    .abs-general{
-        width: 760px;
-        height: 500;
-        margin-right: 24px;
     }
 
     .abs-promotion{
