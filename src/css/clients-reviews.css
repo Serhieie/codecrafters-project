@@ -89,14 +89,20 @@
 ===================== */
 
 @media screen and (min-width:375px) {
-    .container {
+    .client-reviews-container {
         max-width: 343px;
         padding: 36px 16px;
     }
 }
 
+@media screen and (max-width:374px) {
+    .client-item {
+        max-width: 295px;
+    }
+}
+
 @media screen and (min-width:768px) {
-    .container {
+    .client-reviews-container {
         max-width: 704px;
         padding: 36px 32px;
     }
@@ -131,7 +137,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .container {
+    .client-reviews-container {
         max-width: 1320px;
         padding: 60px;
     }
