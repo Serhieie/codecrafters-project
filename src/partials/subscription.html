@@ -45,38 +45,33 @@
       </form>
     </div>
 
-    <div class="picture-subscription">
+    <div class="subscription-image-container">
       <picture>
         <source
-          srcset="
-            ./img/img-mobile/product14x1-mobile.jpg 1x,
-            ./img/img-mobile/product14x2-mobile.jpg 2x
-          "
-          media="(max-width: 767px)"
+          class="image-subscription"
+          srcset="./img/img-mobile/product14x1-mobile.jpg x1, ./img/img-mobile/product14x2-mobile.jpg "
+          media=" (max-width: 767px)"
         />
 
         <source
+          class="image-subscription"
           srcset="
             ./img/img-tablet/product14x1-tablet.jpg 1x,
             ./img/img-tablet/product14x2-tablet.jpg 2x
           "
-          media="(min-width: 768px)"
+          media=" (min-width: 768px)"
         />
 
         <source
-          srcset="
-            ./img/img-desctop/product14x1-desctop.jpg 1x,
-            ./img/img-desctop/product14x2-desctop.jpg 2x
-          "
-          media="(min-width: 1440px)"
-        />
-
-        <img
-          src="./img/img-desctop/product14x1-desctop.jpg"
-          alt="product14"
           class="image-subscription"
-          width="460"
-          height="410"
+          srcset="./img/sub-prod-14x1.jpg 1x, ./img/sub-prod-14x2.jpg 2x"
+          media=" (min-width: 1440px)"
+        />
+        
+        <img
+          class="image-subscription"
+          src="./img/img-mobile/product14x1-mobile.jpg"
+          alt="product14"
         />
       </picture>
     </div>

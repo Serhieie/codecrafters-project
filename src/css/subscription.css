@@ -4,6 +4,8 @@
 } */
 .container-subscription {
   display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .title-subscription {
   color: var(--blue-font);
@@ -81,3 +83,29 @@
   border: 1px solid var(--dark-grey);
   margin-bottom: 20px;
 }
+
+
+.subscription-image-container {
+  max-width: 343px;
+  max-height: 300px;
+  }
+  
+  .image-subscription {
+  width:100%
+  height: 100%
+  }
+@media screen and (min-width: 768px) {
+
+  .subscription-image-container {
+  max-width: 704px;
+  max-height: 396px;
+  }
+  }
+  
+  @media screen and (min-width: 1440px) {
+  
+  .subscription-image-container {
+  max-width: 460px;
+  max-height: 410px;
+  }
+  }
