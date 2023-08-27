@@ -1,0 +1,80 @@
+<section id="minimal-subscription" class="subscription">
+  <div class="container container-subscription">
+    <div class="file-subscription">
+      <h2 class="title-subscription">NEWSLETTER</h2>
+      <p class="text-subscription">
+        Every week we will send you new designs and information about sales.
+      </p>
+
+      <form class="form-subscription">
+        <input
+          type="text"
+          name="user-text"
+          placeholder="Name"
+          class="input-subsription in-sub"
+          required
+        />
+
+        <input
+          type="email"
+          name="user-email"
+          placeholder="Email"
+          class="input-subsription in-sub"
+          required
+        />
+
+        <div class="checkbox-label-subscriotion">
+          <input
+            type="checkbox"
+            id="checkbox-subscriotion"
+            name="checkbox-subscriotion"
+            value="true"
+            class="checkbox-subscriotion visually-hidden"
+          />
+          <label for="checkbox-subscriotion" class="label-subscription"
+            >
+            <span>
+              <svg class="svg-subscription" width="13" height="13">
+                <use href="./img/sprite.svg#check"></use>
+              </svg>
+            </span>
+            Agree to subscribe to the newsletter
+          </label>
+        </div>
+
+        <button type="submit" class="button-subscription">Send</button>
+      </form>
+    </div>
+
+    <div class="subscription-image-container">
+      <picture>
+        <source
+          class="image-subscription"
+          srcset="
+          ./img/sub-prod-14x1.jpg 1x, 
+          ./img/sub-prod-14x2.jpg 2x"
+          media=" (min-width: 1440px)"
+        />
+        <source
+          class="image-subscription"
+          srcset="
+            ./img/img-tablet/product14x1-tablet.jpg 1x,
+            ./img/img-tablet/product14x2-tablet.jpg 2x
+          "
+          media=" (min-width: 768px)"
+        />
+        <source
+          class="image-subscription"
+          srcset="./img/img-mobile/product14x1-mobile.jpg x1, 
+          ./img/img-mobile/product14x2-mobile.jpg "
+          media=" (max-width: 767px)"
+        />
+        <img
+          class="image-subscription"
+          src="./img/img-mobile/product14x1-mobile.jpg"
+          alt="new interior designs"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
