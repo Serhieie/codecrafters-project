@@ -95,6 +95,12 @@
     }
 }
 
+@media screen and (max-width:374px) {
+    .client-item {
+        max-width: 295px;
+    }
+}
+
 @media screen and (min-width:768px) {
     .container {
         max-width: 704px;
