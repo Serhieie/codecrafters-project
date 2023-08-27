@@ -1,0 +1,187 @@
+/* =============================== */
+
+.client-container {
+    width: 100%;
+    background-color: #F7FAFF;
+}
+
+.client-title {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.client-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.client-item {
+    background-color: #FFFFFF;
+    padding: 24px;
+    width: 343px;
+    height: 230px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--white, #FFF);
+}
+
+.client-item:not(:first-child) {
+    display: none;
+}
+
+/* ==============Контейнер з даними клієнта================ */
+
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.client-img {
+    margin-right: 14px;
+    width: 48px;
+    height: 48px;
+}
+
+/* ==============Ім'я та дата================ */
+
+.client-name {
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    color: #0A224A;
+}
+
+.client-date {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #0A224A;
+    opacity: 0.8;
+}
+
+/* /* ==============Комент клієнта=============== */
+
+.client-text {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #0A224A;
+}
+
+/* =============================== */
+
+/* ==================
+=== MOBILE
+===================== */
+
+@media screen and (min-width:375px) {
+    .container {
+        max-width: 343px;
+        padding: 36px 16px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        max-width: 704px;
+        padding: 36px 32px;
+    }
+
+    .client-item:nth-last-child(n+2) {
+        display: block;
+    }
+
+    .client-title {
+        font-size: 32px;
+    }
+
+    .client-list {
+        gap: 0 16px;
+    }
+
+    .client-item {
+        width: 344px;
+        height: 319px;
+    }
+
+    /* ==============Контейнер з даними клієнта================ */
+
+    .user-container {
+        margin-bottom: 14px;
+    }
+
+    .client-img {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+        padding: 60px;
+    }
+
+    .client-title {
+        font-size: 32px;
+    }
+
+    .client-list {
+        gap: 24px;
+    }
+
+    .client-item {
+        padding: 32px;
+        width: 424px;
+        height: 306px;
+    }
+
+    .client-item:not(:first-child) {
+        display: block;
+    }
+
+    /* ==============Контейнер з даними клієнта================ */
+
+    .user-container {
+        margin-bottom: 16px;
+    }
+
+    .client-img {
+        margin-right: 16px;
+    }
+
+    /* ==============Ім'я та дата================ */
+
+    .client-name {
+        font-size: 20px;
+        line-height: 45px;
+    }
+
+    .client-date {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /* /* ==============Комент клієнта=============== */
+
+    .client-text {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    /* =============================== */
+}
