@@ -8,7 +8,7 @@
 .abs-general{
     padding: 64px 16px;
     background-color: var(--light-blue);
-    width: 375px;
+    max-width: 375px;
 }
 .abs-title{
     color: var(--blue-font);
@@ -67,8 +67,8 @@
 }
 
 .abs-img{
-    width: 375px;
-    height: 400px;
+    width: 100%;
+    max-width: 375px;
 }
 
 .abs-img-med{
@@ -80,7 +80,8 @@
 @media screen and (min-width: 768px) {
     
     .abs-general{
-        width: 704px;
+        max-width: 704px;
+        min-width: 704px;
         padding: 36px 16px;
         margin-bottom: 30px;
     }
@@ -114,8 +115,8 @@
     }
 
     .abs-img{
-        width: 704px;
-        height: 540px;
+        max-width: 704px;
+        max-height: 540px;
     }
 }
 
