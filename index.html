@@ -30,8 +30,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <script type="module" crossorigin src="/codecrafters-project/assets/index-3b92e59a.js"></script>
-    <link rel="stylesheet" href="/codecrafters-project/assets/index-a3bc473e.css">
+    <script type="module" crossorigin src="/codecrafters-project/assets/index-56f37d97.js"></script>
+    <link rel="stylesheet" href="/codecrafters-project/assets/index-7e88e98a.css">
   </head>
   <body class="body slide">
     <!-- Bohdan Serhieiev -->
@@ -111,7 +111,7 @@
       <section class="abs-section" id="minimal-about-us">
     <div class="abs-general">
         <div class="abs-promotion">
-            <h2 class="abs-title abs-line">
+            <h2 id="about" class="abs-title abs-line">
                 About us
             </h2>
             <h3 class="abs-subtitle">
@@ -177,7 +177,7 @@
 <section id="minimal-prices">
     <div class="container">
         <div class="special-container">
-            <h2 class="visually-hidden">Chairs Tables Dressers Sofas</h2>
+            <h2 id="price-id" class="visually-hidden">Chairs Tables Dressers Sofas</h2>
             <ul class="price-list">
                 <li class="price-item">
                     <p class="price-item-text">Chairs</p>
@@ -204,7 +204,7 @@
       <!-- Марія Смаль -->
       <section class="products" id="minimal-our-products">
   <div class="container">
-    <h2 class="products-title">OUR PRODUCTS</h2>
+    <h2 id="our-prod-id" class="products-title">OUR PRODUCTS</h2>
     <ul class="products-list">
       <li class="products-item">
         <a href="#" class="our-products-link">
@@ -286,7 +286,7 @@
       
 <section class="bestsellers" id="minimal-bestsellers">
   <div class="container">
-    <h2 class="bestsellers-title">Bestsellers</h2>
+    <h2 id="bestsell" class="bestsellers-title">Bestsellers</h2>
     <div class="bestsellers-container">
       <div class="bestsellers-left-side">
         <picture>
@@ -413,7 +413,7 @@
       <section id="minimal-clients">
   <div class="client-container">
     <div class="container client-reviews-container">
-      <h2 class="client-title">Clients reviews</h2>
+      <h2 id="reviews-id" class="client-title">Clients reviews</h2>
       <ul class="client-list list">
         <li class="client-item">
           <div class="user-container user">
@@ -496,15 +496,20 @@
           class="input-subsription in-sub"
           required
         />
-
-        <input
+        <label class="email-input-label">
+          <input 
           type="email"
+          id="email-input"
           name="user-email"
           placeholder="Email"
-          class="input-subsription in-sub"
-          required
+          class="input-subsription in-sub email-input"
         />
-
+        <span class="svg-error-span">
+        <svg class="svg-error" width="20" height="20">
+          <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-ic_baseline-error-outline"></use>
+        </svg>
+      </span>
+        </label>
         <div class="checkbox-label-subscriotion">
           <input
             type="checkbox"
@@ -512,6 +517,7 @@
             name="checkbox-subscriotion"
             value="true"
             class="checkbox-subscriotion visually-hidden"
+            required
           />
           <label for="checkbox-subscriotion" class="label-subscription">
             <span>
@@ -532,24 +538,25 @@
         <source
           class="image-subscription"
           srcset="/codecrafters-project/assets/sub-prod-14x1-af22ec7d.jpg 1x, /codecrafters-project/assets/sub-prod-14x2-452ce8c0.jpg 2x"
-          media=" (min-width: 1440px)"
+          media="(min-width: 1440px)"
         />
         <source
           class="image-subscription"
           srcset="/codecrafters-project/assets/product14x1-tablet-fd08ac28.jpg 1x, /codecrafters-project/assets/product14x2-tablet-de65079f.jpg 2x"
-          media=" (min-width: 768px)"
+          media="(min-width: 768px)"
         />
         <source
           class="image-subscription"
-          srcset="/codecrafters-project/assets/product14x1-mobile-a8062eba.jpg x1, /codecrafters-project/assets/product14x2-mobile-32091611.jpg x2"
-          media=" (max-width: 767px)"
+          srcset="/codecrafters-project/assets/sub-prod-14x1-af22ec7d.jpg 1x, /codecrafters-project/assets/sub-prod-14x2-452ce8c0.jpg 2x"
+          media="(min-width: 320px)"
         />
         <img
           class="image-subscription"
-          src="/codecrafters-project/assets/product14x1-mobile-a8062eba.jpg"
-          alt="new interior designs"
+          src="/codecrafters-project/assets/sub-prod-14x1-af22ec7d.jpg"
+          alt="нові дизайни інтер'єрів"
         />
       </picture>
+      
     </div>
   </div>
 </section>
@@ -617,26 +624,26 @@
         </a>
       </li>
     </ul>
-    <nav class="footer-navigation" id="minimal-footer">
+    <nav class="footer-navigation">
       <ul class="footer-nav-list list">
         <li class="footer-nav-list-items">
-          <a href="#minimal-about-us" class="footer-nav-link link">About us </a>
+          <a href="#about" class="footer-nav-link link">About us </a>
         </li>
         <li class="footer-nav-list-items">
-          <a href="#minimal-our-products" class="footer-nav-link link"
+          <a href="#our-prod-id" class="footer-nav-link link"
             >Our products
           </a>
         </li>
         <li class="footer-nav-list-items">
-          <a href="#minimal-prices" class="footer-nav-link link">Prices </a>
+          <a href="#price-id" class="footer-nav-link link">Prices </a>
         </li>
         <li class="footer-nav-list-items">
-          <a href="#minimal-bestsellers" class="footer-nav-link link"
+          <a href="#bestsell" class="footer-nav-link link"
             >Bestsellers
           </a>
         </li>
         <li class="footer-nav-list-items">
-          <a href="#minimal-clients" class="footer-nav-link link">Reviews </a>
+          <a href="#reviews-id" class="footer-nav-link link">Reviews </a>
         </li>
       </ul>
     </nav>
