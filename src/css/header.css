@@ -39,7 +39,6 @@
   z-index: 2;
   opacity: 1;
   transition: opacity 300ms ease-in-out;
-  width: 32px 32px;
   padding-right: 0;
 
 }

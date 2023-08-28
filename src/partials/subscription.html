@@ -14,15 +14,20 @@
           class="input-subsription in-sub"
           required
         />
-
-        <input
+        <label class="email-input-label">
+          <input 
           type="email"
+          id="email-input"
           name="user-email"
           placeholder="Email"
-          class="input-subsription in-sub"
-          required
+          class="input-subsription in-sub email-input"
         />
-
+        <span class="svg-error-span">
+        <svg class="svg-error" width="20" height="20">
+          <use href="./img/sprite.svg#icon-ic_baseline-error-outline"></use>
+        </svg>
+      </span>
+        </label>
         <div class="checkbox-label-subscriotion">
           <input
             type="checkbox"
@@ -30,6 +35,7 @@
             name="checkbox-subscriotion"
             value="true"
             class="checkbox-subscriotion visually-hidden"
+            required
           />
           <label for="checkbox-subscriotion" class="label-subscription">
             <span>
@@ -49,29 +55,29 @@
       <picture>
         <source
           class="image-subscription"
-          srcset="./img/sub-prod-14x1.jpg 1x, ./img/sub-prod-14x2.jpg 2x"
-          media=" (min-width: 1440px)"
+          srcset="/img/img-mobile/sub-prod-14x1.jpg 1x, /img/img-mobile/sub-prod-14x2.jpg 2x"
+          media="(min-width: 1440px)"
         />
         <source
           class="image-subscription"
           srcset="
-            ./img/img-tablet/product14x1-tablet.jpg 1x,
-            ./img/img-tablet/product14x2-tablet.jpg 2x
-          "
-          media=" (min-width: 768px)"
+            /img/img-tablet/product14x1-tablet.jpg 1x,
+            /img/img-tablet/product14x2-tablet.jpg 2x"
+          media="(min-width: 768px)"
         />
         <source
           class="image-subscription"
-          srcset="./img/img-mobile/product14x1-mobile.jpg x1, 
-          ./img/img-mobile/product14x2-mobile.jpg x2"
-          media=" (max-width: 767px)"
+          srcset="/img/img-mobile/sub-prod-14x1.jpg 1x, 
+          /img/img-mobile/sub-prod-14x2.jpg 2x"
+          media="(min-width: 320px)"
         />
         <img
           class="image-subscription"
-          src="./img/img-mobile/product14x1-mobile.jpg"
-          alt="new interior designs"
+          src="/img/img-mobile/sub-prod-14x1.jpg"
+          alt="нові дизайни інтер'єрів"
         />
       </picture>
+      
     </div>
   </div>
 </section>

@@ -19,12 +19,36 @@
   gap: 20px;
 }
 .in-sub {
-  max-width: 343px;
+  width: 342px;
   height: 50px;
   padding: 11px 20px;
   color: var(--blue-font);
-  border: 1px solid var(--dark-grey);
+  border: 1px solid var(--blue-font);
+  outline: none;
 }
+
+.in-sub:empty {
+border-color: var(--grey);
+border: 1px solid var(--grey);
+}
+
+.email-input:focus:invalid,
+.email-input:active:invalid {
+  border-color: #e74a3b;
+  color: #e74a3b;
+}
+
+.svg-error-span {
+  position: relative;
+  display: none;
+}
+
+.svg-error {
+  position: absolute;
+  left: -40px;
+  top: 0;
+}
+
 
 .in-sub:active,
 .in-sub:focus,
@@ -97,15 +121,38 @@
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 375px) {
+
+
+@media screen and (max-width: 374px) {
+  .email-input:focus:invalid ~ .svg-error-span {
+    display: block;
+    left: 280px;
+    top: -36px;
+  }
   .text-subscription {
     max-width: 343px;
     margin-bottom: 20px;
   }
+  .in-sub {
+    width: 280px;
+  }
+}
+@media screen and (min-width: 375px) {
+  .email-input:focus:invalid ~ .svg-error-span {
+    display: block;
+    left: 340px;
+    top: -36px;
+  }
 }
 
 
+
 @media screen and (min-width: 768px) {
+  .email-input:focus:invalid ~ .svg-error-span {
+    display: block;
+    left: 520px;
+    top: -36px;
+  }
   .title-subscription {
     font-size: 32px;
     text-align: left;
@@ -117,20 +164,26 @@
     font-size: 18px;
   }
   .in-sub {
-    max-width: 536px;
+    width: 536px;
   }
   .label-subscription {
     font-size: 18px;
   }
   .button-subscription {
+    margin-bottom: 44px;
     font-size: 18px;
   }
   .subscription-image-container {
     max-width: 704px;
     max-height: 396px;
   }
+
 }
 @media screen and (min-width: 1440px) {
+
+  .button-subscription {
+    margin-bottom: 0;
+  }
   .container-subscription {
     width: 1096px;
     display: flex;
