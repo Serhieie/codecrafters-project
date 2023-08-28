@@ -27,7 +27,6 @@
     align-items: center;
 }
 
-
 .price-item-text:hover::before,
 .price-item-text:focus::before {
     content: "";
@@ -46,6 +45,12 @@
 }
 
 /* Media */
+
+@media screen and (max-width: 374px){
+    .special-container{
+        padding: 0 16px;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .price-item-text {
@@ -70,10 +75,12 @@
       transform: scaleX(0);
       transform-origin: 0% 0%;
       opacity: 1;
+      width: 0px;
     }
     100% {
       transform: scaleX(1);
       transform-origin: 0% 0%;
       opacity: 1;
+      width: 40px;
     }
-  }
+}

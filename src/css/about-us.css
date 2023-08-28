@@ -1,0 +1,145 @@
+.abs-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.abs-general{
+    padding: 64px 16px;
+    background-color: var(--light-blue);
+    max-width: 375px;
+}
+.abs-title{
+    color: var(--blue-font);
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 50px;
+    position: relative;
+}
+
+.abs-promotion{
+    max-width: 343px;
+    margin: auto;
+}
+
+.abs-line::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -50px;
+    width: 30px;
+    height: 1px;
+    background-color:var(--blue-font);
+  }
+
+.abs-subtitle{
+    margin-top: 30px;
+    color: var(--blue-font);
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.abs-description{
+    margin-top: 30px;
+}
+
+.abs-advantages{
+    max-width: 170px;
+    margin: auto;
+}
+
+.abs-subtitle-advantages{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.abs-description-advantages{
+    margin-top: 14px;
+    color: var(--blue-font);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+.abs-img{
+    width: 100%;
+    max-width: 375px;
+}
+
+.abs-img-med{
+    height: 100%;
+    width: 100%;
+	object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .abs-general{
+        max-width: 704px;
+        min-width: 704px;
+        padding: 36px 16px;
+        margin-bottom: 30px;
+    }
+
+    .abs-promotion{
+        max-width: 576px;
+    }
+
+    .abs-subtitle{
+        font-size: 32px;
+        line-height: 1.4;
+    }
+
+    .abs-description{
+        font-size: 18px;
+    }
+
+    .abs-advantages{
+        width: 576px;
+    }
+
+    .abs-advantages-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 33px;
+    }
+
+    .abs-description-advantages{
+        width: 170px;
+    }
+
+    .abs-img{
+        max-width: 704px;
+        max-height: 540px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .abs-general{
+        width: 760px;
+        margin-bottom: 0;
+        margin-right: 24px;
+        padding: 36px 69px 37px 69px;
+    }
+
+    .abs-section{
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .abs-promotion{
+        width: 622px;
+    }
+
+    .abs-img{
+        width: 536px;
+        height: 540px;
+    }
+}
