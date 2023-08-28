@@ -23,13 +23,11 @@
   height: 50px;
   padding: 11px 20px;
   color: var(--blue-font);
-  border: 1px solid var(--blue-font);
   outline: none;
+  border: 1px solid var(--grey);
 }
-
-.in-sub:empty {
-border-color: var(--grey);
-border: 1px solid var(--grey);
+.in-sub::placeholder {
+  color: var(--light-grey);
 }
 
 .email-input:focus:invalid,
@@ -49,11 +47,15 @@ border: 1px solid var(--grey);
   top: 0;
 }
 
+.in-sub:not(:placeholder-shown) {
+  border-color: var(--blue-font);
+}
+
 
 .in-sub:active,
 .in-sub:focus,
 .in-sub:hover {
-  border-color: 1px solid var(--blue-font);
+  border: 1px solid var(--blue-font);
 
 }
 .button-subscription {
