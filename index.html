@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="apple-touch-icon" sizes="57x57" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/codecrafters-project/assets/android-chrome-192x192-b51ab593.png">
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA8RJREFUWEftl39MlHUcx1/PcyFwMqD4lWiscrVWWv1hFP5T5+TAarF0EQPbdKDpgpYRd6EgSMCKDWgWY+S5OEAtJakY03AuVCRK/8AolB9xTVhtlhH2C3nOe9pztPOe7jnuuJmu1efP5z6fz/f1+fF9P88JsQkrZG6QycgI/wO4dyA6OpLJyV+RJPs/MpSYmEgmJi5htzuc+VUjiIu7he6j7/LDjxPsqGzgkyOfKR7XxMIj9Ji2rGP9c2nsO3CI/FdrERDcAWR21ph5dk2K68CuE6coKqtjeHgsYBDxJpG1Gaswv7ye6KibnbkdDgfGpzbT3z9yFSAiIoxzfW2IoqiqWLLbsbZ8RFWNlcnJ3/zuhtLapIeXUlGay5J77/KIa3mvg3xTDbLgugUyG7JXU/DSOiLCwzwCLv70M1W1jezZ14EkzczPmyUkxLG9cCNPPv4YgoZT7xdnKNhay9DwmHoHEGSioyKpLMsj7QmDZv6zg6MU7aiju6fPYyyh+mByN2eQ+3wGIcHzPOL/mLrMFlMVH7Z3If9Vg6YOpCQ/QpOlYtYqOw4fp6zyHb49/z2CAE+nGSg2byR+QazXuHNDNh415qjAPQBkWSbVuJwmS7nPeV+enqZpbzsPLLmbxGVLffoPDNowGLPBbTCaAKuMy7G6AbS2dfKNbZy8TZno9SE+D1IcvvxqiLI3Gmhtrnb5Bwywu7mNrcVvs+DWKAoLsklfbURQ+q5hFy5cpLJ6N+8f6ESnExkf7vwbQI4qyq8O7Gpspbi0HlmeUa7EZfdRXvICD95/jyuZopyWxg+o3tnCL5d+dz4PChIZHzniBjCKQdmBuY5AASgqqVeRL75zET2fWl3Pjp88zTOZZpWPJ0CAO2CxHmTb9jpV8jtuX0jvsSbXs64Tp0nPMqlGMy9IZEzVgQABlE0vKHzzxgFY97Zjul4ASpkpyUkqHbi2HfBxCxSA1OQklQ7UW/ZT+lrDnEegvYR+ALh34IrDQfraV+g+eWbOAIJOxjZwiNCQYGfsjBD5AbDS8BB7Gl/n67MjbCt5i57P+50fD+7mzy1QNCMrM5Xy4jzm60MZGBxlRUoOsnw1l6YQ6eeHsNKQyOHOHiTpiqbi+QOgBCpHxS+Koci8AWla4sX8Kt9CJIqCU/VmM38B3HMo8q287Nwt4M/yQAC0Cvo3A8TTe6zZTYpPkZ5l9vqW9DbOgDsQGxdJX+9+dKLOmfvgx0fZlFtx/QAU8tsWxhIeFuq8Vrbz3zE1Jc2+uRq/BtyBOZ/kJeC/BaBU6/kXS+BP6YE2n+7gFTYAAAAASUVORK5CYII=">
-<link rel="icon" type="image/png" sizes="96x96" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA8RJREFUWEftl39MlHUcx1/PcyFwMqD4lWiscrVWWv1hFP5T5+TAarF0EQPbdKDpgpYRd6EgSMCKDWgWY+S5OEAtJakY03AuVCRK/8AolB9xTVhtlhH2C3nOe9pztPOe7jnuuJmu1efP5z6fz/f1+fF9P88JsQkrZG6QycgI/wO4dyA6OpLJyV+RJPs/MpSYmEgmJi5htzuc+VUjiIu7he6j7/LDjxPsqGzgkyOfKR7XxMIj9Ji2rGP9c2nsO3CI/FdrERDcAWR21ph5dk2K68CuE6coKqtjeHgsYBDxJpG1Gaswv7ye6KibnbkdDgfGpzbT3z9yFSAiIoxzfW2IoqiqWLLbsbZ8RFWNlcnJ3/zuhtLapIeXUlGay5J77/KIa3mvg3xTDbLgugUyG7JXU/DSOiLCwzwCLv70M1W1jezZ14EkzczPmyUkxLG9cCNPPv4YgoZT7xdnKNhay9DwmHoHEGSioyKpLMsj7QmDZv6zg6MU7aiju6fPYyyh+mByN2eQ+3wGIcHzPOL/mLrMFlMVH7Z3If9Vg6YOpCQ/QpOlYtYqOw4fp6zyHb49/z2CAE+nGSg2byR+QazXuHNDNh415qjAPQBkWSbVuJwmS7nPeV+enqZpbzsPLLmbxGVLffoPDNowGLPBbTCaAKuMy7G6AbS2dfKNbZy8TZno9SE+D1IcvvxqiLI3Gmhtrnb5Bwywu7mNrcVvs+DWKAoLsklfbURQ+q5hFy5cpLJ6N+8f6ESnExkf7vwbQI4qyq8O7Gpspbi0HlmeUa7EZfdRXvICD95/jyuZopyWxg+o3tnCL5d+dz4PChIZHzniBjCKQdmBuY5AASgqqVeRL75zET2fWl3Pjp88zTOZZpWPJ0CAO2CxHmTb9jpV8jtuX0jvsSbXs64Tp0nPMqlGMy9IZEzVgQABlE0vKHzzxgFY97Zjul4ASpkpyUkqHbi2HfBxCxSA1OQklQ7UW/ZT+lrDnEegvYR+ALh34IrDQfraV+g+eWbOAIJOxjZwiNCQYGfsjBD5AbDS8BB7Gl/n67MjbCt5i57P+50fD+7mzy1QNCMrM5Xy4jzm60MZGBxlRUoOsnw1l6YQ6eeHsNKQyOHOHiTpiqbi+QOgBCpHxS+Koci8AWla4sX8Kt9CJIqCU/VmM38B3HMo8q287Nwt4M/yQAC0Cvo3A8TTe6zZTYpPkZ5l9vqW9DbOgDsQGxdJX+9+dKLOmfvgx0fZlFtx/QAU8tsWxhIeFuq8Vrbz3zE1Jc2+uRq/BtyBOZ/kJeC/BaBU6/kXS+BP6YE2n+7gFTYAAAAASUVORK5CYII=">
-<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAeFJREFUOE9jFJNz+s9AJvjP8J+BEWQAKysLw58/fxn+/yfOLIj6Pwz//kMNmD29lkFWWoKhpnEKw5mz13G6h5GRgcHf14GhviqdYebctQzTZ69mYJRScv1/YNdsBlVlebAL1m7Yw9DSOYfh+fM3KAbp6aoyNNdnM1iY6oLFV63dxZBT1AHzAjPDikUdDDZWRmDJb99+MEyatgxsAy8vF0NFSTJDVJgnAxMTI1h+yozlDM0dc8AWgsMAxJg5pYYh0M+J4ez5awyG+hoMTExMDE+fvWLg4+Vm4OXlZvj69TvDg0fPGLQ1lRnKaiYyLFy8iQEeiMgGRCVWMDx/8ZahrSGHwdJcH2wLyLmtXXMYEmL8GIryYvEbEJlQwbBv/2kGQUE+hhsX1oNtNbeNBTu9vDieoSgvDr8BMUnVDLv3nmAQFOBjuHFxPcODh88YzGxjGBgZGXEbADJ9xuRqcBhEJVQy7N1/inQDpk+qYpCSEmWIS65l+PjxC1YD/PzsGWZMrGGoqpvMsAA9EMXFhBhev/kAT43YvAByqY6OCsPP7z8Zbt99jIgFbEkPlwHIauHRiM0APj5uhluXNzLcvfuYwcoxARyI6ACvASDFQoK8DL9+/WH48vU71vxB0ABcuQqkEQYAdhoNUK94mUwAAAAASUVORK5CYII=">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-    <!--Підключення фавіконки-->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Furniture & Home Decor</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Furniture & Home Decor Designs">
+    <meta name="keywords" content="furniture, home decor, designs, quality">
+    <meta name="author" content="Code Crafters">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="icon" href="/codecrafters-project/assets/favicon-f5a6c467.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/codecrafters-project/assets/apple-touch-icon-a4f51f4e.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA8RJREFUWEftl39MlHUcx1/PcyFwMqD4lWiscrVWWv1hFP5T5+TAarF0EQPbdKDpgpYRd6EgSMCKDWgWY+S5OEAtJakY03AuVCRK/8AolB9xTVhtlhH2C3nOe9pztPOe7jnuuJmu1efP5z6fz/f1+fF9P88JsQkrZG6QycgI/wO4dyA6OpLJyV+RJPs/MpSYmEgmJi5htzuc+VUjiIu7he6j7/LDjxPsqGzgkyOfKR7XxMIj9Ji2rGP9c2nsO3CI/FdrERDcAWR21ph5dk2K68CuE6coKqtjeHgsYBDxJpG1Gaswv7ye6KibnbkdDgfGpzbT3z9yFSAiIoxzfW2IoqiqWLLbsbZ8RFWNlcnJ3/zuhtLapIeXUlGay5J77/KIa3mvg3xTDbLgugUyG7JXU/DSOiLCwzwCLv70M1W1jezZ14EkzczPmyUkxLG9cCNPPv4YgoZT7xdnKNhay9DwmHoHEGSioyKpLMsj7QmDZv6zg6MU7aiju6fPYyyh+mByN2eQ+3wGIcHzPOL/mLrMFlMVH7Z3If9Vg6YOpCQ/QpOlYtYqOw4fp6zyHb49/z2CAE+nGSg2byR+QazXuHNDNh415qjAPQBkWSbVuJwmS7nPeV+enqZpbzsPLLmbxGVLffoPDNowGLPBbTCaAKuMy7G6AbS2dfKNbZy8TZno9SE+D1IcvvxqiLI3Gmhtrnb5Bwywu7mNrcVvs+DWKAoLsklfbURQ+q5hFy5cpLJ6N+8f6ESnExkf7vwbQI4qyq8O7Gpspbi0HlmeUa7EZfdRXvICD95/jyuZopyWxg+o3tnCL5d+dz4PChIZHzniBjCKQdmBuY5AASgqqVeRL75zET2fWl3Pjp88zTOZZpWPJ0CAO2CxHmTb9jpV8jtuX0jvsSbXs64Tp0nPMqlGMy9IZEzVgQABlE0vKHzzxgFY97Zjul4ASpkpyUkqHbi2HfBxCxSA1OQklQ7UW/ZT+lrDnEegvYR+ALh34IrDQfraV+g+eWbOAIJOxjZwiNCQYGfsjBD5AbDS8BB7Gl/n67MjbCt5i57P+50fD+7mzy1QNCMrM5Xy4jzm60MZGBxlRUoOsnw1l6YQ6eeHsNKQyOHOHiTpiqbi+QOgBCpHxS+Koci8AWla4sX8Kt9CJIqCU/VmM38B3HMo8q287Nwt4M/yQAC0Cvo3A8TTe6zZTYpPkZ5l9vqW9DbOgDsQGxdJX+9+dKLOmfvgx0fZlFtx/QAU8tsWxhIeFuq8Vrbz3zE1Jc2+uRq/BtyBOZ/kJeC/BaBU6/kXS+BP6YE2n+7gFTYAAAAASUVORK5CYII=">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAeFJREFUOE9jFJNz+s9AJvjP8J+BEWQAKysLw58/fxn+/yfOLIj6Pwz//kMNmD29lkFWWoKhpnEKw5mz13G6h5GRgcHf14GhviqdYebctQzTZ69mYJRScv1/YNdsBlVlebAL1m7Yw9DSOYfh+fM3KAbp6aoyNNdnM1iY6oLFV63dxZBT1AHzAjPDikUdDDZWRmDJb99+MEyatgxsAy8vF0NFSTJDVJgnAxMTI1h+yozlDM0dc8AWgsMAxJg5pYYh0M+J4ez5awyG+hoMTExMDE+fvWLg4+Vm4OXlZvj69TvDg0fPGLQ1lRnKaiYyLFy8iQEeiMgGRCVWMDx/8ZahrSGHwdJcH2wLyLmtXXMYEmL8GIryYvEbEJlQwbBv/2kGQUE+hhsX1oNtNbeNBTu9vDieoSgvDr8BMUnVDLv3nmAQFOBjuHFxPcODh88YzGxjGBgZGXEbADJ9xuRqcBhEJVQy7N1/inQDpk+qYpCSEmWIS65l+PjxC1YD/PzsGWZMrGGoqpvMsAA9EMXFhBhev/kAT43YvAByqY6OCsPP7z8Zbt99jIgFbEkPlwHIauHRiM0APj5uhluXNzLcvfuYwcoxARyI6ACvASDFQoK8DL9+/WH48vU71vxB0ABcuQqkEQYAdhoNUK94mUwAAAAASUVORK5CYII=">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/codecrafters-project/assets/index-3f7ef2db.js"></script>
-    <link rel="stylesheet" href="/codecrafters-project/assets/index-051622cd.css">
-  </head>
+    
+    <title>Furniture & Home Decor</title>
+  <script type="module" crossorigin src="/codecrafters-project/assets/index-3f7ef2db.js"></script>
+  <link rel="stylesheet" href="/codecrafters-project/assets/index-051622cd.css">
+</head>
   <body class="body slide">
     <!-- Bohdan Serhieiev -->
     <header class="header">
     <div class="header-container container">
         <a href="/index.html" class="logo link">
-          <svg class="logo-svg" width="100" height="16">
+          <svg class="logo-svg" alt="Our logotype" width="100" height="16">
             <use
               class="logo-use"
               xlink:href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-logo"
@@ -597,7 +590,7 @@
     <footer class="footer" id="minimal-footer">
   <div class="container footer-container">
     <a href="/src/index.html" class="footer-logo-link link">
-      <svg class="footer-logo" width="100" height="16">
+      <svg class="footer-logo" alt="Our logotype" width="100" height="16">
         <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-logo"></use>
       </svg>
     </a>
@@ -608,7 +601,7 @@
           class="icon-link link"
           target="_blank"
         >
-          <svg class="icon">
+          <svg class="icon" alt="facebook logotype logo" >
             <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-ph_facebook-logo"></use>
           </svg>
         </a>
@@ -619,7 +612,7 @@
           class="icon-link link"
           target="_blank"
         >
-          <svg class="icon">
+          <svg class="icon" alt="instagram logotype logo">
             <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-ph_instagram-logo"></use>
           </svg>
         </a>
@@ -630,8 +623,8 @@
           class="icon-link link"
           target="_blank"
         >
-          <svg class="icon">
-            <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-ph_youtube-logo"></use>
+          <svg class="icon" alt="you tube logotype logo">
+            <use href="/codecrafters-project/assets/sprite-de6ecd5a.svg#icon-ph_youtube-logo" ></use>
           </svg>
         </a>
       </li>
