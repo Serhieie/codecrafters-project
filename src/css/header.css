@@ -118,6 +118,7 @@
   transform: translateX(0);
   transition: transform 500ms ease-in-out;
   background-color: var(--white);
+  overflow: scroll;
   }
   
 .header-nav-list {
