@@ -18,7 +18,7 @@
   justify-content: center;
   gap: 20px;
 }
-.in-sub {
+.input-subsription {
   width: 342px;
   height: 50px;
   padding: 11px 20px;
@@ -26,7 +26,7 @@
   outline: none;
   border: 1px solid var(--grey);
 }
-.in-sub::placeholder {
+.input-subsription::placeholder {
   color: var(--light-grey);
 }
 
@@ -36,7 +36,18 @@
   color: #e74a3b;
 }
 
+.name-input:focus:invalid,
+.name-input:active:invalid {
+  border-color: #e74a3b;
+  color: #e74a3b;
+}
+
 .svg-error-span {
+  position: relative;
+  display: none;
+}
+
+.svg-error-span-name {
   position: relative;
   display: none;
 }
@@ -46,15 +57,20 @@
   left: -40px;
   top: 0;
 }
+.svg-error-name {
+  position: absolute;
+  left: -40px;
+  top: 0;
+}
 
-.in-sub:not(:placeholder-shown) {
+.input-subsription:not(:placeholder-shown) {
   border-color: var(--blue-font);
 }
 
 
-.in-sub:active,
-.in-sub:focus,
-.in-sub:hover {
+.input-subsription:active,
+.input-subsription:focus,
+.input-subsription:hover {
   border: 1px solid var(--blue-font);
 
 }
@@ -126,6 +142,7 @@
 
 
 @media screen and (max-width: 374px) {
+  .name-input:focus:invalid ~ .svg-error-span-name,
   .email-input:focus:invalid ~ .svg-error-span {
     display: block;
     left: 280px;
@@ -135,11 +152,12 @@
     max-width: 343px;
     margin-bottom: 20px;
   }
-  .in-sub {
+  .input-subsription {
     width: 280px;
   }
 }
 @media screen and (min-width: 375px) {
+  .name-input:focus:invalid ~ .svg-error-span-name,
   .email-input:focus:invalid ~ .svg-error-span {
     display: block;
     left: 340px;
@@ -150,6 +168,7 @@
 
 
 @media screen and (min-width: 768px) {
+  .name-input:focus:invalid ~ .svg-error-span-name,
   .email-input:focus:invalid ~ .svg-error-span {
     display: block;
     left: 520px;
@@ -165,7 +184,7 @@
   .input-subsription::placeholder {
     font-size: 18px;
   }
-  .in-sub {
+  .input-subsription {
     width: 536px;
   }
   .label-subscription {
@@ -206,7 +225,7 @@
   .input-subsription::placeholder {
     font-size: 18px;
   }
-  .in-sub {
+  .input-subsription {
     width: 536px;
   }
   .label-subscription {
